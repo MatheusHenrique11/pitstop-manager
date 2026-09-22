@@ -20,13 +20,16 @@ const refreshSubject = new BehaviorSubject<boolean>(false);
  * único (sem disparar N refreshes paralelos).
  */
 export const authRefreshInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn) => {
-  const authService = inject(AuthService);
-  const router = inject(Router);
-
-  // Não intercepta as próprias chamadas de auth para evitar loop infinito
+  // Não intercepta as próprias chamadas de auth para evitar loop infinito.
+  // Também evita injetar AuthService aqui: a própria AuthService dispara sua
+  // primeira chamada (/auth/refresh) de dentro do construtor, e injetá-la de
+  // volta nesse meio-tempo causa NG0200 (dependência circular).
   if (req.url.includes('/auth/')) {
     return next(req);
   }
+
+  const authService = inject(AuthService);
+  const router = inject(Router);
 
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {

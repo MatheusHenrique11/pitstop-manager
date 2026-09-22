@@ -88,7 +88,8 @@ public class StripePaymentGatewayService implements PaymentGatewayService {
     public String createCheckoutSession(String customerId, SubscriptionPlan plan,
                                         String successUrl, String cancelUrl) {
         if (secretKey.isBlank()) {
-            String mockUrl = successUrl + "?session_id=cs_mock_"
+            String separator = successUrl.contains("?") ? "&" : "?";
+            String mockUrl = successUrl + separator + "session_id=cs_mock_"
                 + UUID.randomUUID().toString().replace("-", "").substring(0, 14);
             log.info("[STRIPE-MOCK] checkoutSession plano={} → {}", plan, mockUrl);
             return mockUrl;

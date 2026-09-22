@@ -59,11 +59,16 @@ public class AuthController {
         String rawRefreshToken = extractCookie(request, REFRESH_COOKIE)
             .orElseThrow(() -> new AuthService.InvalidCredentialsException("Refresh token não encontrado"));
 
-        AuthResponse authResponse = authService.refreshAccessToken(rawRefreshToken);
+        AuthService.RefreshResult result = authService.refreshAccessToken(rawRefreshToken);
+        AuthResponse authResponse = result.authResponse();
 
-        // Renova os cookies com os novos tokens
+        // Renova os cookies com os novos tokens — o refresh token é rotacionado
+        // (single-use) a cada chamada, então o cookie precisa ser sempre reemitido
+        // aqui. Sem isso, a 2ª chamada de /refresh sempre falha como replay.
         addCookie(response, ACCESS_COOKIE, authResponse.accessToken(),
             (int) (accessTokenExpiryMs / 1000));
+        addCookie(response, REFRESH_COOKIE, result.rawRefreshToken(),
+            (int) (refreshTokenExpiryMs / 1000));
 
         return ResponseEntity.ok(new AuthResponse(null, authResponse.expiresIn(), authResponse.role(), authResponse.email(), authResponse.empresaId()));
     }

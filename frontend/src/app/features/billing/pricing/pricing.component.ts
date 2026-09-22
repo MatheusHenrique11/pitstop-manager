@@ -157,23 +157,28 @@ export class PricingComponent {
   ];
 
   assinar(plano: SubscriptionPlan): void {
-    if (!this.auth.isAuthenticated()) {
-      this.router.navigate(['/login'], { queryParams: { returnUrl: '/billing/pricing' } });
-      return;
-    }
+    // Aguarda a checagem inicial de sessão (cookie HTTP-Only) terminar antes
+    // de decidir — numa página recém-carregada esse restore ainda pode estar
+    // em andamento, e isAuthenticated() direto sempre voltaria false aqui.
+    this.auth.sessionReady$.subscribe(() => {
+      if (!this.auth.isAuthenticated()) {
+        this.router.navigate(['/login'], { queryParams: { returnUrl: '/billing/pricing' } });
+        return;
+      }
 
-    this.carregando.set(plano);
-    this.erro.set(null);
+      this.carregando.set(plano);
+      this.erro.set(null);
 
-    this.sub.criarCheckout(plano).subscribe({
-      next: res => {
-        this.sub.invalidateStatus();
-        window.location.href = res.checkoutUrl;
-      },
-      error: () => {
-        this.carregando.set(null);
-        this.erro.set('Não foi possível iniciar o checkout. Tente novamente.');
-      },
+      this.sub.criarCheckout(plano).subscribe({
+        next: res => {
+          this.sub.invalidateStatus();
+          window.location.href = res.checkoutUrl;
+        },
+        error: () => {
+          this.carregando.set(null);
+          this.erro.set('Não foi possível iniciar o checkout. Tente novamente.');
+        },
+      });
     });
   }
 }

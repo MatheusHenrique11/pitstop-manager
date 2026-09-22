@@ -92,8 +92,15 @@ public class AuthService {
         return rawRefreshToken;
     }
 
+    /**
+     * Resultado de um refresh bem-sucedido: o novo access token (em authResponse)
+     * mais o raw do novo refresh token — nunca serializado no body, apenas usado
+     * pelo controller para renovar o cookie HTTP-Only.
+     */
+    public record RefreshResult(AuthResponse authResponse, String rawRefreshToken) {}
+
     @Transactional
-    public AuthResponse refreshAccessToken(String rawRefreshToken) {
+    public RefreshResult refreshAccessToken(String rawRefreshToken) {
         String hash = hashToken(rawRefreshToken);
         RefreshToken stored = refreshTokenRepository.findByTokenHash(hash)
             .orElseThrow(() -> new InvalidCredentialsException("Refresh token inválido"));
@@ -119,7 +126,9 @@ public class AuthService {
         );
 
         UUID empresaId = user.getEmpresa() != null ? user.getEmpresa().getId() : null;
-        return new AuthResponse(accessToken, accessTokenExpiryMs / 1000, user.getRole().name(), user.getEmail(), empresaId);
+        AuthResponse authResponse = new AuthResponse(
+            accessToken, accessTokenExpiryMs / 1000, user.getRole().name(), user.getEmail(), empresaId);
+        return new RefreshResult(authResponse, newRawToken);
     }
 
     @Transactional
