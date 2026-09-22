@@ -27,7 +27,7 @@ import { UserResponse } from '@core/models/user.model';
               <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Mês</label>
               <select [(ngModel)]="mes"
                 class="w-full bg-surface-800 border border-surface-600 text-slate-300 text-sm
-                       rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-petroleum-500">
+                       rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
                 @for (m of meses; track m.valor) {
                   <option [value]="m.valor">{{ m.label }}</option>
                 }
@@ -37,7 +37,7 @@ import { UserResponse } from '@core/models/user.model';
               <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Ano</label>
               <select [(ngModel)]="ano"
                 class="w-full bg-surface-800 border border-surface-600 text-slate-300 text-sm
-                       rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-petroleum-500">
+                       rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
                 @for (a of anos; track a) {
                   <option [value]="a">{{ a }}</option>
                 }
@@ -53,7 +53,7 @@ import { UserResponse } from '@core/models/user.model';
             <input type="number" [(ngModel)]="valorMeta" min="0.01" step="100"
               placeholder="Ex: 5000.00"
               class="w-full bg-surface-800 border border-surface-600 text-slate-100 text-sm
-                     rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-petroleum-500
+                     rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500
                      placeholder-slate-600">
           </div>
         </div>
@@ -70,7 +70,7 @@ import { UserResponse } from '@core/models/user.model';
             Cancelar
           </button>
           <button (click)="salvar()" [disabled]="salvando()"
-            class="px-5 py-2 text-sm font-semibold bg-petroleum-700 hover:bg-petroleum-600
+            class="px-5 py-2 text-sm font-semibold bg-brand-700 hover:bg-brand-600
                    text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
             {{ salvando() ? 'Salvando...' : 'Salvar Meta' }}
           </button>

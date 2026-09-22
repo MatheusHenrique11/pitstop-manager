@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Pitstop Manager</title>
+  <desc id="desc">Logo animado com escudo vermelho e velocímetro para o sistema SaaS Pitstop Manager.</desc>
+
+  <defs>
+    <linearGradient id="redShield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff3131"/>
+      <stop offset=".55" stop-color="#d90018"/>
+      <stop offset="1" stop-color="#79000e"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".5" stop-color="#aeb4bd"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#16dbe8"/>
+      <stop offset="1" stop-color="#64ffff"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#202633"/>
+      <stop offset="1" stop-color="#080a0f"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+
+    <style>
+      .logo { transform-origin: 500px 500px; animation: logoIn .9s cubic-bezier(.2,.9,.2,1) both; }
+      .shield { transform-origin: 500px 470px; animation: shieldPulse 3.2s ease-in-out infinite; }
+      .needle { transform-origin: 500px 500px; animation: needleSweep 2.2s cubic-bezier(.65,0,.35,1) infinite alternate; }
+      .speedGlow { animation: speedGlow 1.8s ease-in-out infinite; }
+      .wordmark { animation: wordIn 1s .25s cubic-bezier(.2,.9,.2,1) both; }
+      .dash { animation: dashIn .8s .6s ease-out both; }
+      .subtitle { animation: fadeIn 1s .8s ease-out both; }
+
+      @keyframes logoIn {
+        from { opacity:0; transform:scale(.72) translateY(35px); }
+        to { opacity:1; transform:scale(1) translateY(0); }
+      }
+      @keyframes shieldPulse {
+        0%,100% { filter:drop-shadow(0 0 0 rgba(255,30,45,0)); }
+        50% { filter:drop-shadow(0 0 16px rgba(255,30,45,.28)); }
+      }
+      @keyframes needleSweep {
+        from { transform:rotate(-28deg); }
+        to { transform:rotate(38deg); }
+      }
+      @keyframes speedGlow {
+        0%,100% { opacity:.55; }
+        50% { opacity:1; }
+      }
+      @keyframes wordIn {
+        from { opacity:0; transform:translateY(25px); }
+        to { opacity:1; transform:translateY(0); }
+      }
+      @keyframes dashIn {
+        from { stroke-dasharray:0 260; opacity:0; }
+        to { stroke-dasharray:260 0; opacity:1; }
+      }
+      @keyframes fadeIn {
+        from { opacity:0; letter-spacing:18px; }
+        to { opacity:1; letter-spacing:8px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .logo,.shield,.needle,.speedGlow,.wordmark,.dash,.subtitle { animation:none; }
+      }
+    </style>
+  </defs>
+
+  <g class="logo">
+    <!-- subtle background glow -->
+    <ellipse class="speedGlow" cx="500" cy="450" rx="300" ry="285" fill="#e60020" opacity=".18" filter="url(#softGlow)"/>
+
+    <!-- shield -->
+    <g class="shield">
+      <path d="M500 55 L850 155 L850 485 C850 700 715 850 500 925 C285 850 150 700 150 485 L150 155 Z"
+            fill="#090c12" stroke="#151a22" stroke-width="28"/>
+      <path d="M500 70 L830 165 L830 480 C830 675 700 815 500 892 C300 815 170 675 170 480 L170 165 Z"
+            fill="url(#metal)" stroke="#f7f7f7" stroke-width="10"/>
+      <path d="M500 100 L795 185 L795 475 C795 645 675 770 500 842 C325 770 205 645 205 475 L205 185 Z"
+            fill="url(#redShield)" stroke="#17070b" stroke-width="18"/>
+      <path d="M500 128 L765 205 L765 465 C765 610 660 720 500 785 C340 720 235 610 235 465 L235 205 Z"
+            fill="none" stroke="#ff3434" stroke-width="7" opacity=".7"/>
+
+      <!-- gauge -->
+      <path d="M285 535 A215 215 0 0 1 715 535" fill="none" stroke="#080b10" stroke-width="88" stroke-linecap="round"/>
+      <path d="M305 520 A195 195 0 0 1 695 520" fill="none" stroke="#2cdde8" stroke-width="48"
+            stroke-linecap="butt" stroke-dasharray="68 544" transform="rotate(-22 500 500)"/>
+      <path d="M305 520 A195 195 0 0 1 695 520" fill="none" stroke="#ffd21f" stroke-width="48"
+            stroke-linecap="butt" stroke-dasharray="115 497" transform="rotate(-2 500 500)"/>
+      <path d="M305 520 A195 195 0 0 1 695 520" fill="none" stroke="#ff2b31" stroke-width="48"
+            stroke-linecap="butt" stroke-dasharray="120 492" transform="rotate(28 500 500)"/>
+
+      <!-- gauge face -->
+      <circle cx="500" cy="500" r="128" fill="url(#dark)" stroke="#05070a" stroke-width="12"/>
+      <path d="M500 500 L672 294 L535 517 Z" fill="#00ddea" opacity=".22" filter="url(#glow)"/>
+      <path class="needle" d="M500 500 L676 286 L526 516 Z" fill="url(#cyan)" stroke="#061116" stroke-width="7"/>
+      <circle cx="500" cy="500" r="43" fill="url(#metal)" stroke="#11151c" stroke-width="8"/>
+      <circle cx="500" cy="500" r="17" fill="#141923"/>
+    </g>
+
+    <!-- wordmark -->
+    <g class="wordmark" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-style="italic">
+      <text x="365" y="950" font-size="100" fill="#fff">PIT</text>
+      <text x="625" y="950" font-size="100" fill="#f21d2b">STOP</text>
+    </g>
+
+    <g class="dash" stroke="#f21d2b" stroke-width="10" stroke-linecap="round">
+      <line x1="145" y1="1052" x2="285" y2="1052"/>
+      <line x1="715" y1="1052" x2="855" y2="1052"/>
+    </g>
+
+    <text class="subtitle" x="500" y="1060" text-anchor="middle"
+          font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800"
+          letter-spacing="8" fill="#fff">MANAGER</text>
+  </g>
+</svg>

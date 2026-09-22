@@ -16,7 +16,7 @@ const STEPS: StatusManutencao[] = ['ABERTA', 'EM_ANDAMENTO', 'AGUARDANDO_PECAS',
 
       <!-- Header mínimo -->
       <header class="px-5 py-4 border-b border-surface-700 bg-surface-900 flex items-center gap-3">
-        <div class="w-8 h-8 bg-petroleum-700 rounded-lg flex items-center justify-center shadow-glow-petroleum">
+        <div class="w-8 h-8 bg-brand-700 rounded-lg flex items-center justify-center shadow-glow-brand">
           <svg viewBox="0 0 24 24" class="w-4 h-4 text-white fill-current">
             <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
           </svg>
@@ -34,7 +34,7 @@ const STEPS: StatusManutencao[] = ['ABERTA', 'EM_ANDAMENTO', 'AGUARDANDO_PECAS',
           <!-- Carregando -->
           @if (loading()) {
             <div class="card flex flex-col items-center gap-4 py-12">
-              <div class="w-8 h-8 border-2 border-petroleum-500 border-t-transparent rounded-full animate-spin"></div>
+              <div class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
               <p class="text-slate-400 text-sm">Buscando sua ordem de serviço...</p>
             </div>
           }
@@ -90,7 +90,7 @@ const STEPS: StatusManutencao[] = ['ABERTA', 'EM_ANDAMENTO', 'AGUARDANDO_PECAS',
                     <!-- Linha conectora -->
                     @if (i < STEPS.length - 1) {
                       <div class="flex-1 h-0.5 -mt-5 mx-1"
-                           [class]="isPast(STEPS[i + 1]) || isCurrent(STEPS[i + 1]) ? 'bg-petroleum-600' : 'bg-surface-700'">
+                           [class]="isPast(STEPS[i + 1]) || isCurrent(STEPS[i + 1]) ? 'bg-brand-600' : 'bg-surface-700'">
                       </div>
                     }
                   }
@@ -112,7 +112,7 @@ const STEPS: StatusManutencao[] = ['ABERTA', 'EM_ANDAMENTO', 'AGUARDANDO_PECAS',
                     {{ os()!.veiculoMarca }} {{ os()!.veiculoModelo }}
                     @if (os()!.veiculoCor) { <span class="text-slate-500">· {{ os()!.veiculoCor }}</span> }
                   </p>
-                  <p class="font-mono text-xs bg-surface-700 text-petroleum-400 px-2 py-0.5 rounded mt-0.5 inline-block">
+                  <p class="font-mono text-xs bg-surface-700 text-brand-400 px-2 py-0.5 rounded mt-0.5 inline-block">
                     {{ os()!.veiculoPlaca }}
                   </p>
                 </div>
@@ -188,13 +188,13 @@ export class RastreioComponent implements OnInit {
   }
 
   stepClass(step: StatusManutencao): string {
-    if (this.isCurrent(step)) return 'border-petroleum-500 bg-petroleum-700/30 text-petroleum-400';
+    if (this.isCurrent(step)) return 'border-brand-500 bg-brand-700/30 text-brand-400';
     if (this.isPast(step))    return 'border-success-500 bg-success-600/20 text-success-400';
     return 'border-surface-600 bg-surface-800 text-slate-600';
   }
 
   stepLabelClass(step: StatusManutencao): string {
-    if (this.isCurrent(step)) return 'text-petroleum-400';
+    if (this.isCurrent(step)) return 'text-brand-400';
     if (this.isPast(step))    return 'text-success-400';
     return 'text-slate-600';
   }

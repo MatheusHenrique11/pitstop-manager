@@ -33,7 +33,7 @@ interface QuickAction {
 
       @if (disabledModuleAlert()) {
         <div class="mb-4 alert-warning">
-          <svg viewBox="0 0 24 24" class="w-4 h-4 mt-0.5 flex-shrink-0 fill-current text-safety-400">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 mt-0.5 flex-shrink-0 fill-current text-gold-400">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
           </svg>
           <span>
@@ -41,7 +41,7 @@ interface QuickAction {
             Entre em contato com o administrador para habilitá-lo.
           </span>
           <button (click)="dismissModuleAlert()"
-                  class="ml-auto flex-shrink-0 text-safety-400 hover:text-white transition-colors">
+                  class="ml-auto flex-shrink-0 text-gold-400 hover:text-white transition-colors">
             <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
               <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
             </svg>
@@ -56,7 +56,7 @@ interface QuickAction {
         </div>
         <div class="flex items-center gap-2 text-xs text-slate-500 bg-surface-800
                     border border-surface-700 rounded-lg px-3 py-2">
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-current text-petroleum-500">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-current text-brand-500">
             <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
           </svg>
           {{ today }}
@@ -91,7 +91,7 @@ interface QuickAction {
             <a [routerLink]="action.path"
                class="card-hover flex flex-col items-center gap-3 py-6 text-center group">
               <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl
-                          bg-surface-700 group-hover:bg-petroleum-700/30 transition-colors duration-200">
+                          bg-surface-700 group-hover:bg-brand-700/30 transition-colors duration-200">
                 {{ action.icon }}
               </div>
               <div>
@@ -107,7 +107,7 @@ interface QuickAction {
 
         <div class="card">
           <h3 class="text-sm font-semibold text-slate-300 mb-4 flex items-center gap-2">
-            <span class="w-2 h-2 bg-safety-500 rounded-full"></span>
+            <span class="w-2 h-2 bg-gold-500 rounded-full"></span>
             Legenda — Status de OS
           </h3>
           <div class="space-y-2.5">
@@ -125,7 +125,7 @@ interface QuickAction {
 
         <div class="card">
           <h3 class="text-sm font-semibold text-slate-300 mb-4 flex items-center gap-2">
-            <span class="w-2 h-2 bg-petroleum-500 rounded-full"></span>
+            <span class="w-2 h-2 bg-brand-500 rounded-full"></span>
             Informações do Sistema
           </h3>
           <div class="space-y-3">
@@ -177,16 +177,16 @@ export class DashboardComponent implements OnInit {
       label: 'Veículos',
       value: this.totalVeiculos(),
       sub: 'cadastrados no sistema',
-      iconBg: 'bg-petroleum-700/20 border border-petroleum-700/30',
-      iconColor: 'text-petroleum-400 text-xl',
+      iconBg: 'bg-brand-700/20 border border-brand-700/30',
+      iconColor: 'text-brand-400 text-xl',
       icon: '🚗',
     },
     {
       label: 'OS Abertas',
       value: '—',
       sub: 'ordens em andamento',
-      iconBg: 'bg-safety-600/20 border border-safety-600/30',
-      iconColor: 'text-safety-400 text-xl',
+      iconBg: 'bg-gold-600/20 border border-gold-600/30',
+      iconColor: 'text-gold-400 text-xl',
       icon: '🔩',
     },
     {
@@ -223,7 +223,7 @@ export class DashboardComponent implements OnInit {
 
   readonly statusLegend = [
     { label: 'Aguardando',   dot: 'bg-slate-400',   badge: 'badge-inactive' },
-    { label: 'Em andamento', dot: 'bg-safety-500',  badge: 'badge-warning' },
+    { label: 'Em andamento', dot: 'bg-gold-500',  badge: 'badge-warning' },
     { label: 'Concluída',    dot: 'bg-success-500', badge: 'badge-active' },
     { label: 'Cancelada',    dot: 'bg-danger-500',  badge: 'badge-danger' },
   ];

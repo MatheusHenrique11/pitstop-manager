@@ -3,11 +3,12 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '@core/services/auth.service';
+import { RevealDirective } from '@shared/directives/reveal.directive';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, RouterLink],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, RevealDirective],
   template: `
     <div class="min-h-screen flex bg-surface-950">
 
@@ -17,30 +18,28 @@ import { AuthService } from '@core/services/auth.service';
 
         <!-- Decorative grid -->
         <div class="absolute inset-0 opacity-5"
-             style="background-image: linear-gradient(rgba(8,145,178,.5) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(8,145,178,.5) 1px, transparent 1px);
+             style="background-image: linear-gradient(rgba(229,35,27,.6) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(229,35,27,.6) 1px, transparent 1px);
                     background-size: 40px 40px;"></div>
 
         <!-- Decorative blobs -->
-        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-petroleum-700/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 -right-10 w-56 h-56 bg-safety-600/15 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-brand-700/25 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-1/4 -right-10 w-56 h-56 bg-gold-600/20 rounded-full blur-3xl animate-float"
+             style="animation-delay: -3s;"></div>
 
         <!-- Logo -->
-        <div class="relative z-10 flex items-center gap-3">
-          <img src="assets/logo.png" alt="PitStop Manager"
-               class="w-14 h-14 object-contain flex-shrink-0" />
-          <div>
-            <p class="font-bold text-white text-lg leading-none">PitStop Manager</p>
-            <p class="text-xs text-slate-500">by RiseCode Studio</p>
-          </div>
+        <div class="relative z-10 -ml-3 -mt-2">
+          <img src="assets/logo-animated.svg" alt="PitStop Manager"
+               class="w-48 h-48 object-contain" />
+          <p class="text-xs text-slate-500 -mt-2 ml-4">by RiseCode Studio</p>
         </div>
 
         <!-- Hero text -->
         <div class="relative z-10 space-y-6">
-          <div>
+          <div appReveal>
             <h2 class="text-4xl xl:text-5xl font-extrabold text-white leading-tight tracking-tight">
               Gestão Inteligente<br>
-              <span class="text-petroleum-400">para Oficinas</span><br>
+              <span class="gradient-text">para Oficinas</span><br>
               Automotivas
             </h2>
             <p class="mt-4 text-slate-400 text-base leading-relaxed max-w-sm">
@@ -49,7 +48,7 @@ import { AuthService } from '@core/services/auth.service';
           </div>
 
           <!-- Feature chips -->
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2" appReveal [revealDelay]="150">
             @for (tag of tags; track tag) {
               <span class="badge-info text-xs">{{ tag }}</span>
             }
@@ -64,13 +63,13 @@ import { AuthService } from '@core/services/auth.service';
 
       <!-- Right panel: login form -->
       <div class="flex-1 flex items-center justify-center px-6 py-12">
-        <div class="w-full max-w-sm space-y-8">
+        <div class="w-full max-w-sm space-y-8" appReveal>
 
           <!-- Mobile logo -->
           <div class="lg:hidden text-center">
-            <img src="assets/logo.png" alt="PitStop Manager"
-                 class="w-20 h-20 object-contain mx-auto mb-3" />
-            <h1 class="text-2xl font-bold text-white">PitStop Manager</h1>
+            <img src="assets/logo-full.png" alt="PitStop Manager"
+                 class="w-40 h-40 object-contain mx-auto mb-1" />
+            <h1 class="sr-only">PitStop Manager</h1>
           </div>
 
           <!-- Heading -->
@@ -178,7 +177,7 @@ import { AuthService } from '@core/services/auth.service';
           </form>
 
           <!-- Subscription CTA -->
-          <div class="rounded-2xl border border-petroleum-600/30 bg-petroleum-900/30 p-5 space-y-3 text-center">
+          <div class="hover-lift rounded-2xl border border-brand-600/30 bg-brand-900/30 p-5 space-y-3 text-center">
             <p class="text-sm font-medium text-slate-300">Ainda não tem uma conta?</p>
             <a
               routerLink="/billing/pricing"
@@ -190,7 +189,7 @@ import { AuthService } from '@core/services/auth.service';
             </a>
             <p class="text-xs text-slate-500">
               Já possui cadastro?
-              <a routerLink="/signup" class="text-petroleum-400 hover:text-petroleum-300 font-medium transition-colors">Crie sua conta</a>
+              <a routerLink="/signup" class="text-brand-400 hover:text-brand-300 font-medium transition-colors">Crie sua conta</a>
             </p>
           </div>
 
@@ -201,9 +200,9 @@ import { AuthService } from '@core/services/auth.service';
 
           <!-- Legal links -->
           <p class="text-center text-xs text-slate-600 space-x-2">
-            <a routerLink="/politica-privacidade" class="hover:text-petroleum-400 transition-colors">Política de Privacidade</a>
+            <a routerLink="/politica-privacidade" class="link-underline">Política de Privacidade</a>
             <span>·</span>
-            <a routerLink="/termos-de-uso" class="hover:text-petroleum-400 transition-colors">Termos de Uso</a>
+            <a routerLink="/termos-de-uso" class="link-underline">Termos de Uso</a>
           </p>
         </div>
       </div>

@@ -196,7 +196,7 @@ import {
               <div class="sm:col-span-2">
                 <label class="flex items-center gap-3 cursor-pointer">
                   <input type="checkbox" formControlName="fiscalEnabled"
-                         class="w-4 h-4 accent-petroleum-500" />
+                         class="w-4 h-4 accent-brand-500" />
                   <span class="text-sm text-slate-300">
                     Habilitar emissão de NFS-e pela oficina
                   </span>

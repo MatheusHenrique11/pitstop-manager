@@ -67,7 +67,7 @@ import { NotificationConfig } from '@core/models/notification.model';
           <!-- E-mail -->
           <div class="card">
             <div class="flex items-center gap-3 mb-5">
-              <div class="w-10 h-10 rounded-xl bg-petroleum-600/20 border border-petroleum-600/30
+              <div class="w-10 h-10 rounded-xl bg-brand-600/20 border border-brand-600/30
                           flex items-center justify-center flex-shrink-0">
                 <span class="text-lg">✉️</span>
               </div>

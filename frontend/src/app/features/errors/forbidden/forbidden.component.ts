@@ -21,8 +21,8 @@ import { RouterLink } from '@angular/router';
           Entre em contato com o administrador se acreditar que isso é um erro.
         </p>
         <a routerLink="/dashboard"
-           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-petroleum-700
-                  hover:bg-petroleum-600 text-white text-sm font-medium transition-colors duration-150">
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-700
+                  hover:bg-brand-600 text-white text-sm font-medium transition-colors duration-150">
           <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
             <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
           </svg>

@@ -15,7 +15,7 @@ import { forkJoin } from 'rxjs';
 
         <!-- Header -->
         <div class="text-center">
-          <div class="w-12 h-12 bg-petroleum-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-glow-petroleum">
+          <div class="w-12 h-12 bg-brand-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-glow-brand">
             <svg viewBox="0 0 24 24" class="w-6 h-6 text-white fill-current">
               <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5zm-1 5v2h2v-2h-2zm0 4v2h2v-2h-2z"/>
             </svg>
@@ -23,7 +23,7 @@ import { forkJoin } from 'rxjs';
           <h1 class="text-2xl font-bold text-white">Seus Dados, Seus Direitos</h1>
           <p class="text-sm text-slate-400 mt-1">
             Para usar o Manager PitStop, precisamos do seu consentimento conforme a
-            <span class="text-petroleum-400">Lei Geral de Proteção de Dados (LGPD)</span>.
+            <span class="text-brand-400">Lei Geral de Proteção de Dados (LGPD)</span>.
           </p>
         </div>
 
@@ -46,10 +46,10 @@ import { forkJoin } from 'rxjs';
               <input
                 type="checkbox"
                 [(ngModel)]="ppAccepted"
-                class="mt-1 w-4 h-4 accent-petroleum-500 cursor-pointer">
+                class="mt-1 w-4 h-4 accent-brand-500 cursor-pointer">
               <span class="text-sm text-slate-300 group-hover:text-white transition-colors">
                 Li e aceito a
-                <a routerLink="/politica-privacidade" target="_blank" class="text-petroleum-400 hover:underline">Política de Privacidade</a>
+                <a routerLink="/politica-privacidade" target="_blank" class="text-brand-400 hover:underline">Política de Privacidade</a>
                 do Manager PitStop.
               </span>
             </label>
@@ -72,10 +72,10 @@ import { forkJoin } from 'rxjs';
               <input
                 type="checkbox"
                 [(ngModel)]="touAccepted"
-                class="mt-1 w-4 h-4 accent-petroleum-500 cursor-pointer">
+                class="mt-1 w-4 h-4 accent-brand-500 cursor-pointer">
               <span class="text-sm text-slate-300 group-hover:text-white transition-colors">
                 Li e aceito os
-                <a routerLink="/termos-de-uso" target="_blank" class="text-petroleum-400 hover:underline">Termos de Uso</a>
+                <a routerLink="/termos-de-uso" target="_blank" class="text-brand-400 hover:underline">Termos de Uso</a>
                 do Manager PitStop.
               </span>
             </label>

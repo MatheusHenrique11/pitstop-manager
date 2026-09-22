@@ -20,7 +20,7 @@ import { ProducaoMecanicoResponse } from '@core/models/meta.model';
       <!-- Loading -->
       @if (carregando()) {
         <div class="flex justify-center py-16">
-          <div class="w-8 h-8 border-2 border-petroleum-500 border-t-transparent rounded-full animate-spin"></div>
+          <div class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       }
 
@@ -81,7 +81,7 @@ import { ProducaoMecanicoResponse } from '@core/models/meta.model';
             <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">% Atingido</p>
             <p class="text-3xl font-bold"
                [class.text-emerald-400]="p.metaBatida"
-               [class.text-safety-400]="!p.metaBatida && p.valorMeta != null"
+               [class.text-gold-400]="!p.metaBatida && p.valorMeta != null"
                [class.text-slate-400]="p.valorMeta == null">
               {{ p.valorMeta != null ? (p.percentualAtingido | number:'1.1-1') + '%' : '—' }}
             </p>
@@ -102,7 +102,7 @@ import { ProducaoMecanicoResponse } from '@core/models/meta.model';
             <div class="w-full bg-surface-700 rounded-full h-3">
               <div class="h-3 rounded-full transition-all duration-700"
                    [class.bg-emerald-500]="p.metaBatida"
-                   [class.bg-petroleum-500]="!p.metaBatida"
+                   [class.bg-brand-500]="!p.metaBatida"
                    [style.width.%]="min(p.percentualAtingido, 100)">
               </div>
             </div>

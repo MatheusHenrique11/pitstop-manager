@@ -100,14 +100,14 @@ function placaValidator(control: { value: string }) {
             [disabled]="!!id"
           >
           @if (clienteSugestoes().length > 0) {
-            <ul class="absolute z-20 w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-1 max-h-52 overflow-y-auto">
+            <ul class="absolute z-20 w-full bg-surface-800 border border-surface-600 rounded-lg shadow-lg mt-1 max-h-52 overflow-y-auto">
               @for (c of clienteSugestoes(); track c.id) {
                 <li
-                  class="px-4 py-2 hover:bg-blue-50 cursor-pointer text-sm"
+                  class="px-4 py-2 hover:bg-brand-700/20 cursor-pointer text-sm text-slate-200 transition-colors duration-150"
                   (mousedown)="selecionarCliente(c)"
                 >
                   <span class="font-medium">{{ c.nome }}</span>
-                  <span class="ml-2 text-gray-400 text-xs">{{ c.cpfCnpj }}</span>
+                  <span class="ml-2 text-slate-500 text-xs">{{ c.cpfCnpj }}</span>
                 </li>
               }
             </ul>

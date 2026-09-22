@@ -122,6 +122,6 @@ export class NotificationLogsComponent implements OnInit {
   channelLabel(l: NotificationLog) { return CHANNEL_LABELS[l.canal]  ?? l.canal; }
   statusColor(l: NotificationLog)  { return STATUS_COLORS[l.status]  ?? 'badge-inactive'; }
   channelColor(l: NotificationLog) {
-    return l.canal === 'WHATSAPP' ? 'text-green-400' : 'text-petroleum-400';
+    return l.canal === 'WHATSAPP' ? 'text-green-400' : 'text-brand-400';
   }
 }

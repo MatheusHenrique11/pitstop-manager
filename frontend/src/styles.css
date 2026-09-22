@@ -3,12 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  html { @apply bg-surface-950 text-slate-100 antialiased; }
+  html { @apply bg-surface-950 text-slate-100 antialiased scroll-smooth; }
   * { @apply border-surface-700; }
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { @apply bg-surface-900; }
   ::-webkit-scrollbar-thumb { @apply bg-surface-600 rounded-full; }
-  ::-webkit-scrollbar-thumb:hover { @apply bg-surface-500; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-brand-700; }
+  ::selection { @apply bg-brand-600 text-white; }
+  :focus-visible { @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-surface-950; }
 }
 
 @layer components {
@@ -16,38 +18,38 @@
   /* ── Buttons ───────────────────────────────────────────────── */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg
-           bg-petroleum-700 text-white font-semibold text-sm
-           hover:bg-petroleum-600 active:bg-petroleum-800
-           focus:outline-none focus:ring-2 focus:ring-petroleum-500 focus:ring-offset-2 focus:ring-offset-surface-800
-           disabled:opacity-40 disabled:cursor-not-allowed
-           transition-all duration-150 shadow-sm hover:shadow-glow-petroleum;
+           bg-brand-700 text-white font-semibold text-sm
+           hover:bg-brand-600 active:bg-brand-800 active:scale-[0.97]
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-surface-800
+           disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100
+           transition-all duration-200 ease-out-expo shadow-sm hover:shadow-glow-brand hover:-translate-y-0.5;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg
            bg-surface-700 text-slate-200 font-semibold text-sm border border-surface-600
-           hover:bg-surface-600 hover:border-surface-500 hover:text-white
-           focus:outline-none focus:ring-2 focus:ring-petroleum-500 focus:ring-offset-2 focus:ring-offset-surface-800
+           hover:bg-surface-600 hover:border-surface-500 hover:text-white active:scale-[0.97]
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-surface-800
            disabled:opacity-40 disabled:cursor-not-allowed
-           transition-all duration-150;
+           transition-all duration-200 ease-out-expo;
   }
 
   .btn-danger {
     @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg
            bg-danger-600 text-white font-semibold text-sm
-           hover:bg-danger-500 active:bg-danger-700
+           hover:bg-danger-500 active:bg-danger-700 active:scale-[0.97]
            focus:outline-none focus:ring-2 focus:ring-danger-500 focus:ring-offset-2 focus:ring-offset-surface-800
            disabled:opacity-40 disabled:cursor-not-allowed
-           transition-all duration-150;
+           transition-all duration-200 ease-out-expo;
   }
 
   .btn-accent {
     @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg
-           bg-safety-600 text-white font-semibold text-sm
-           hover:bg-safety-500 active:bg-safety-700
-           focus:outline-none focus:ring-2 focus:ring-safety-400 focus:ring-offset-2 focus:ring-offset-surface-800
+           bg-gold-600 text-surface-950 font-semibold text-sm
+           hover:bg-gold-500 active:bg-gold-700 active:scale-[0.97]
+           focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-surface-800
            disabled:opacity-40 disabled:cursor-not-allowed
-           transition-all duration-150 shadow-sm hover:shadow-glow-safety;
+           transition-all duration-200 ease-out-expo shadow-sm hover:shadow-glow-gold hover:-translate-y-0.5;
   }
 
   /* ── Forms ─────────────────────────────────────────────────── */
@@ -55,7 +57,7 @@
     @apply block w-full px-3.5 py-2.5 rounded-lg
            bg-surface-900 border border-surface-600
            text-slate-100 text-sm placeholder-slate-500
-           focus:outline-none focus:ring-2 focus:ring-petroleum-600 focus:border-petroleum-600
+           focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-brand-600
            disabled:bg-surface-800 disabled:text-slate-500 disabled:cursor-not-allowed
            transition-colors duration-150;
   }
@@ -74,7 +76,8 @@
   }
 
   .card-hover {
-    @apply card hover:border-petroleum-700 hover:shadow-glow-petroleum transition-all duration-200 cursor-pointer;
+    @apply card hover:border-brand-700 hover:shadow-glow-brand hover:-translate-y-1
+           transition-all duration-300 ease-out-expo cursor-pointer;
   }
 
   /* ── Stats cards ────────────────────────────────────────────── */
@@ -122,7 +125,7 @@
   }
 
   .badge-warning {
-    @apply badge bg-safety-600/20 text-safety-400 border border-safety-600/30;
+    @apply badge bg-gold-600/20 text-gold-400 border border-gold-600/30;
   }
 
   .badge-danger {
@@ -130,7 +133,7 @@
   }
 
   .badge-info {
-    @apply badge bg-petroleum-700/30 text-petroleum-400 border border-petroleum-700/40;
+    @apply badge bg-brand-700/30 text-brand-400 border border-brand-700/40;
   }
 
   /* ── Page layout ────────────────────────────────────────────── */
@@ -161,13 +164,13 @@
   }
 
   .loading-pulse {
-    @apply animate-pulse text-petroleum-500 text-center py-16 text-sm;
+    @apply animate-pulse text-brand-500 text-center py-16 text-sm;
   }
 
   /* ── Alert banners ──────────────────────────────────────────── */
   .alert-warning {
-    @apply px-4 py-3 bg-safety-600/10 border border-safety-600/30 rounded-lg
-           text-sm text-safety-400 flex items-start gap-2;
+    @apply px-4 py-3 bg-gold-600/10 border border-gold-600/30 rounded-lg
+           text-sm text-gold-400 flex items-start gap-2;
   }
 
   .alert-danger {
@@ -178,5 +181,46 @@
   .alert-success {
     @apply px-4 py-3 bg-success-600/10 border border-success-600/30 rounded-lg
            text-sm text-success-400 flex items-start gap-2;
+  }
+
+  /* ── Interactive / decorative ─────────────────────────────────
+     Shared motion primitives — keep the whole app feeling like one
+     system instead of hand-rolling transitions per page. */
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .link-underline {
+    @apply relative text-slate-300 hover:text-white transition-colors duration-150;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute left-0 -bottom-0.5 h-px w-0 bg-brand-400 transition-all duration-300 ease-out-expo;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-400 via-gold-400 to-brand-500;
+  }
+
+  .glass {
+    @apply bg-surface-900/60 backdrop-blur-xl border border-white/10;
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(90deg, theme('colors.surface.800') 25%, theme('colors.surface.700') 50%, theme('colors.surface.800') 75%);
+    background-size: 200% 100%;
+    @apply animate-shimmer;
+  }
+
+  /* Paired with [appReveal]: hidden + offset until it scrolls into view. */
+  .reveal {
+    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out-expo;
+  }
+  .reveal-visible {
+    @apply opacity-100 translate-y-0;
   }
 }

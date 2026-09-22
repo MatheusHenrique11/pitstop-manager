@@ -49,7 +49,7 @@ import { debounceTime, distinctUntilChanged, Subject, switchMap } from 'rxjs';
       <div class="table-container">
         @if (loading()) {
           <div class="loading-pulse">
-            <svg class="animate-spin w-6 h-6 mx-auto mb-3 text-petroleum-500" viewBox="0 0 24 24" fill="none">
+            <svg class="animate-spin w-6 h-6 mx-auto mb-3 text-brand-500" viewBox="0 0 24 24" fill="none">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
             </svg>
@@ -83,7 +83,7 @@ import { debounceTime, distinctUntilChanged, Subject, switchMap } from 'rxjs';
               @for (v of veiculos(); track v.id) {
                 <tr class="tr-hover group">
                   <td class="td">
-                    <span class="font-mono font-bold text-petroleum-400 bg-petroleum-900/30
+                    <span class="font-mono font-bold text-brand-400 bg-brand-900/30
                                  px-2 py-0.5 rounded text-xs tracking-wider">
                       {{ v.placa }}
                     </span>
@@ -100,7 +100,7 @@ import { debounceTime, distinctUntilChanged, Subject, switchMap } from 'rxjs';
                   <td class="td text-right">
                     <a [routerLink]="['/veiculos', v.id]"
                        class="inline-flex items-center gap-1 text-xs font-semibold
-                              text-petroleum-500 hover:text-petroleum-300
+                              text-brand-500 hover:text-brand-300
                               group-hover:underline transition-colors">
                       Detalhes
                       <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-current">
@@ -141,7 +141,7 @@ import { debounceTime, distinctUntilChanged, Subject, switchMap } from 'rxjs';
 
       @if (!isPrivileged()) {
         <p class="mt-3 text-xs text-slate-600 flex items-center gap-1.5">
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-current text-safety-600">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-current text-gold-600">
             <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
           </svg>
           Chassi e RENAVAM exibidos parcialmente. Contate um gerente para acesso completo.

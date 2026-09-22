@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { SubscriptionService } from '@core/services/subscription.service';
 import { AuthService } from '@core/services/auth.service';
 import { SubscriptionPlan } from '@core/models/subscription.model';
+import { RevealDirective } from '@shared/directives/reveal.directive';
 
 interface Plano {
   id: SubscriptionPlan;
@@ -17,12 +18,12 @@ interface Plano {
 @Component({
   selector: 'app-pricing',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   template: `
     <div class="page-wrapper">
-      <div class="page-header">
+      <div class="page-header" appReveal>
         <div>
-          <h1 class="page-title">Escolha seu Plano</h1>
+          <h1 class="page-title">Escolha seu <span class="gradient-text">Plano</span></h1>
           <p class="page-subtitle">Comece gratuitamente e escale conforme o crescimento da sua oficina</p>
         </div>
       </div>
@@ -35,14 +36,16 @@ interface Plano {
       }
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        @for (plano of planos; track plano.id) {
-          <div class="card relative flex flex-col"
+        @for (plano of planos; track plano.id; let i = $index) {
+          <div class="card hover-lift relative flex flex-col"
+               appReveal [revealDelay]="i * 100"
                [class.ring-2]="plano.destaque"
-               [class.ring-petroleum-500]="plano.destaque">
+               [class.ring-brand-500]="plano.destaque"
+               [class.shadow-glow-brand]="plano.destaque">
 
             @if (plano.destaque) {
               <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span class="bg-petroleum-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                <span class="bg-gradient-to-r from-brand-600 to-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                   Mais popular
                 </span>
               </div>
@@ -71,9 +74,10 @@ interface Plano {
             <button
               (click)="assinar(plano.id)"
               [disabled]="carregando() === plano.id"
-              class="w-full py-2.5 rounded-lg text-sm font-semibold transition-all duration-150 disabled:opacity-50"
-              [class.bg-petroleum-600]="plano.destaque"
-              [class.hover:bg-petroleum-500]="plano.destaque"
+              class="w-full py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ease-out-expo
+                     active:scale-[0.97] disabled:opacity-50 disabled:active:scale-100"
+              [class.bg-brand-600]="plano.destaque"
+              [class.hover:bg-brand-500]="plano.destaque"
               [class.text-white]="plano.destaque"
               [class.bg-surface-700]="!plano.destaque"
               [class.hover:bg-surface-600]="!plano.destaque"

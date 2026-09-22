@@ -16,8 +16,8 @@ export interface RastreioResponse {
 
 export const STATUS_CONFIG: Record<StatusManutencao, { label: string; color: string; icon: string; step: number }> = {
   ABERTA:           { label: 'Aberta',            color: 'text-slate-400',    icon: '○', step: 1 },
-  EM_ANDAMENTO:     { label: 'Em Andamento',       color: 'text-petroleum-400', icon: '◉', step: 2 },
-  AGUARDANDO_PECAS: { label: 'Aguardando Peças',   color: 'text-safety-400',   icon: '◷', step: 3 },
+  EM_ANDAMENTO:     { label: 'Em Andamento',       color: 'text-brand-400', icon: '◉', step: 2 },
+  AGUARDANDO_PECAS: { label: 'Aguardando Peças',   color: 'text-gold-400',   icon: '◷', step: 3 },
   CONCLUIDA:        { label: 'Concluída',           color: 'text-success-400',  icon: '✓', step: 4 },
   CANCELADA:        { label: 'Cancelada',           color: 'text-danger-400',   icon: '✕', step: 0 },
 };

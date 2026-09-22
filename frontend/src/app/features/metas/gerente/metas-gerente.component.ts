@@ -25,14 +25,14 @@ import { DefinirMetaDialogComponent } from './definir-meta-dialog.component';
           <!-- Seletor de período -->
           <select [(ngModel)]="mesSelecionado" (ngModelChange)="carregar()"
             class="bg-surface-800 border border-surface-600 text-slate-300 text-sm rounded-lg
-                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-petroleum-500">
+                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
             @for (m of meses; track m.valor) {
               <option [value]="m.valor">{{ m.label }}</option>
             }
           </select>
           <select [(ngModel)]="anoSelecionado" (ngModelChange)="carregar()"
             class="bg-surface-800 border border-surface-600 text-slate-300 text-sm rounded-lg
-                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-petroleum-500">
+                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
             @for (a of anos; track a) {
               <option [value]="a">{{ a }}</option>
             }
@@ -40,7 +40,7 @@ import { DefinirMetaDialogComponent } from './definir-meta-dialog.component';
           <!-- Download PDF -->
           <button (click)="baixarPdf()" [disabled]="baixandoPdf()"
             class="flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-surface-800
-                   border border-surface-600 text-slate-300 hover:text-white hover:border-petroleum-500
+                   border border-surface-600 text-slate-300 hover:text-white hover:border-brand-500
                    rounded-lg transition-all disabled:opacity-50">
             @if (baixandoPdf()) {
               <span class="w-4 h-4 border-2 border-slate-400 border-t-transparent rounded-full animate-spin"></span>
@@ -55,7 +55,7 @@ import { DefinirMetaDialogComponent } from './definir-meta-dialog.component';
       <!-- Loading -->
       @if (carregando()) {
         <div class="flex justify-center py-16">
-          <div class="w-8 h-8 border-2 border-petroleum-500 border-t-transparent rounded-full animate-spin"></div>
+          <div class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       }
 
@@ -70,7 +70,7 @@ import { DefinirMetaDialogComponent } from './definir-meta-dialog.component';
       @if (!carregando() && producoes().length > 0) {
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           @for (p of producoes(); track p.mecanicoId) {
-            <div class="bg-surface-900 border rounded-xl overflow-hidden transition-all hover:border-petroleum-600/50"
+            <div class="bg-surface-900 border rounded-xl overflow-hidden transition-all hover:border-brand-600/50"
                  [ngClass]="{'border-emerald-600/40': p.metaBatida, 'border-surface-700': !p.metaBatida}">
 
               <!-- Header do card -->
@@ -130,7 +130,7 @@ import { DefinirMetaDialogComponent } from './definir-meta-dialog.component';
                     <div class="w-full bg-surface-700 rounded-full h-2">
                       <div class="h-2 rounded-full transition-all"
                            [class.bg-emerald-500]="p.metaBatida"
-                           [class.bg-petroleum-500]="!p.metaBatida"
+                           [class.bg-brand-500]="!p.metaBatida"
                            [style.width.%]="min(p.percentualAtingido, 100)">
                       </div>
                     </div>
@@ -146,9 +146,9 @@ import { DefinirMetaDialogComponent } from './definir-meta-dialog.component';
                     Ver detalhes
                   </button>
                   <button (click)="abrirDefinirMeta(p)"
-                    class="flex-1 text-xs py-1.5 rounded-lg bg-petroleum-700/20 hover:bg-petroleum-700/40
-                           text-petroleum-400 hover:text-petroleum-300 border border-petroleum-700/30
-                           hover:border-petroleum-600/50 transition-all">
+                    class="flex-1 text-xs py-1.5 rounded-lg bg-brand-700/20 hover:bg-brand-700/40
+                           text-brand-400 hover:text-brand-300 border border-brand-700/30
+                           hover:border-brand-600/50 transition-all">
                     {{ p.valorMeta != null ? 'Editar meta' : 'Definir meta' }}
                   </button>
                 </div>

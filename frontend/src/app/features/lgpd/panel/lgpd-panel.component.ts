@@ -24,7 +24,7 @@ import {
         <h1 class="text-2xl font-bold text-white">Privacidade e Dados Pessoais</h1>
         <p class="text-sm text-slate-400 mt-1">
           Gerencie seus consentimentos e exerça seus direitos conforme a
-          <span class="text-petroleum-400">LGPD (Lei 13.709/2018)</span>.
+          <span class="text-brand-400">LGPD (Lei 13.709/2018)</span>.
         </p>
       </div>
 
@@ -62,9 +62,9 @@ import {
         }
 
         <div class="flex flex-wrap gap-2 text-xs pt-1">
-          <a routerLink="/politica-privacidade" class="text-petroleum-400 hover:underline">Ver Política de Privacidade</a>
+          <a routerLink="/politica-privacidade" class="text-brand-400 hover:underline">Ver Política de Privacidade</a>
           <span class="text-slate-600">·</span>
-          <a routerLink="/termos-de-uso" class="text-petroleum-400 hover:underline">Ver Termos de Uso</a>
+          <a routerLink="/termos-de-uso" class="text-brand-400 hover:underline">Ver Termos de Uso</a>
         </div>
       </section>
 
@@ -165,10 +165,10 @@ import {
 
       <!-- ── Links legais ───────────────────────────────────────────────────── -->
       <div class="flex flex-wrap gap-4 text-xs text-slate-500 pb-4">
-        <a routerLink="/politica-privacidade" class="hover:text-petroleum-400 transition-colors">Política de Privacidade</a>
-        <a routerLink="/termos-de-uso" class="hover:text-petroleum-400 transition-colors">Termos de Uso</a>
+        <a routerLink="/politica-privacidade" class="hover:text-brand-400 transition-colors">Política de Privacidade</a>
+        <a routerLink="/termos-de-uso" class="hover:text-brand-400 transition-colors">Termos de Uso</a>
         <span>DPO: privacidade&#64;manutex.com.br</span>
-        <span>ANPD: <a href="https://www.gov.br/anpd" target="_blank" rel="noopener" class="hover:text-petroleum-400">gov.br/anpd</a></span>
+        <span>ANPD: <a href="https://www.gov.br/anpd" target="_blank" rel="noopener" class="hover:text-brand-400">gov.br/anpd</a></span>
       </div>
     </div>
   `,

@@ -24,7 +24,7 @@ function confirmPasswordValidator(): ValidatorFn {
 
         <!-- Logo -->
         <div class="text-center">
-          <div class="w-12 h-12 bg-petroleum-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-glow-petroleum">
+          <div class="w-12 h-12 bg-brand-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-glow-brand">
             <svg viewBox="0 0 24 24" class="w-7 h-7 text-white fill-current">
               <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
             </svg>
@@ -37,7 +37,7 @@ function confirmPasswordValidator(): ValidatorFn {
 
           <!-- ── Dados fiscais da empresa ───────────────────────────────── -->
           <section class="space-y-5">
-            <h2 class="text-sm font-semibold text-petroleum-400 uppercase tracking-widest border-b border-surface-700 pb-2">
+            <h2 class="text-sm font-semibold text-brand-400 uppercase tracking-widest border-b border-surface-700 pb-2">
               Dados da Empresa
             </h2>
 
@@ -55,7 +55,7 @@ function confirmPasswordValidator(): ValidatorFn {
                   (input)="onCnpjInput($event)"
                   autocomplete="off">
                 @if (lookingUpCnpj()) {
-                  <svg class="animate-spin absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-petroleum-400" viewBox="0 0 24 24" fill="none">
+                  <svg class="animate-spin absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-400" viewBox="0 0 24 24" fill="none">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                   </svg>
@@ -107,7 +107,7 @@ function confirmPasswordValidator(): ValidatorFn {
 
           <!-- ── Endereço ────────────────────────────────────────────────── -->
           <section class="space-y-5">
-            <h2 class="text-sm font-semibold text-petroleum-400 uppercase tracking-widest border-b border-surface-700 pb-2">
+            <h2 class="text-sm font-semibold text-brand-400 uppercase tracking-widest border-b border-surface-700 pb-2">
               Endereço Fiscal
             </h2>
 
@@ -169,7 +169,7 @@ function confirmPasswordValidator(): ValidatorFn {
 
           <!-- ── Dados de acesso ─────────────────────────────────────────── -->
           <section class="space-y-5" formGroupName="credenciais">
-            <h2 class="text-sm font-semibold text-petroleum-400 uppercase tracking-widest border-b border-surface-700 pb-2">
+            <h2 class="text-sm font-semibold text-brand-400 uppercase tracking-widest border-b border-surface-700 pb-2">
               Dados de Acesso do Gerente
             </h2>
 
@@ -234,7 +234,7 @@ function confirmPasswordValidator(): ValidatorFn {
 
           <p class="text-center text-sm text-slate-400">
             Já tem uma conta?
-            <a routerLink="/login" class="text-petroleum-400 hover:text-petroleum-300 font-medium">Fazer login</a>
+            <a routerLink="/login" class="text-brand-400 hover:text-brand-300 font-medium">Fazer login</a>
           </p>
         </form>
       </div>

@@ -73,7 +73,7 @@ import {
               @if (assinatura()!.trialEnd) {
                 <div class="flex items-center justify-between border-t border-surface-700 pt-4">
                   <span class="text-sm text-slate-500">Trial expira em</span>
-                  <span class="text-sm text-safety-400 font-medium">
+                  <span class="text-sm text-gold-400 font-medium">
                     {{ assinatura()!.trialEnd | date:'dd/MM/yyyy' : 'UTC' }}
                   </span>
                 </div>
@@ -93,7 +93,7 @@ import {
           <a routerLink="/billing/pricing"
              class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-surface-700
                     hover:bg-surface-600 text-sm text-slate-200 transition-colors">
-            <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current text-petroleum-400 flex-shrink-0">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current text-brand-400 flex-shrink-0">
               <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
             </svg>
             Alterar plano
@@ -163,7 +163,7 @@ import {
                       <div class="flex items-center justify-center gap-2">
                         @if (fatura.pdfUrl) {
                           <a [href]="fatura.pdfUrl" target="_blank" rel="noopener"
-                             class="text-petroleum-400 hover:text-petroleum-300 text-xs
+                             class="text-brand-400 hover:text-brand-300 text-xs
                                     flex items-center gap-1 transition-colors">
                             <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-current">
                               <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>

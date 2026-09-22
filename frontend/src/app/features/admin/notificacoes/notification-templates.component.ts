@@ -42,7 +42,7 @@ import {
         </p>
         <div class="flex flex-wrap gap-2">
           @for (v of vars; track v.key) {
-            <span class="text-xs font-mono bg-surface-700 text-petroleum-300
+            <span class="text-xs font-mono bg-surface-700 text-brand-300
                          px-2 py-1 rounded border border-surface-600"
                   title="{{ v.desc }}">{{ v.key }}</span>
           }
@@ -60,7 +60,7 @@ import {
         @for (evento of eventos; track evento) {
           <div class="card mb-4">
             <h3 class="text-sm font-semibold text-white mb-4 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-petroleum-500"></span>
+              <span class="w-2 h-2 rounded-full bg-brand-500"></span>
               {{ eventLabel(evento) }}
             </h3>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -78,7 +78,7 @@ import {
                                  [checked]="tmpl.ativo"
                                  (change)="toggleAtivo(tmpl)">
                           <div class="w-9 h-5 rounded-full transition-colors"
-                               [class]="tmpl.ativo ? 'bg-petroleum-600' : 'bg-surface-600'">
+                               [class]="tmpl.ativo ? 'bg-brand-600' : 'bg-surface-600'">
                             <div class="absolute top-0.5 w-4 h-4 bg-white rounded-full
                                         shadow transition-transform"
                                  [class]="tmpl.ativo ? 'left-4' : 'left-0.5'"></div>
@@ -108,7 +108,7 @@ import {
                         {{ tmpl.corpo }}
                       </p>
                       <button (click)="startEdit(tmpl)"
-                              class="mt-3 text-xs text-petroleum-400 hover:text-petroleum-300 transition-colors">
+                              class="mt-3 text-xs text-brand-400 hover:text-brand-300 transition-colors">
                         Editar →
                       </button>
                     }

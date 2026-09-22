@@ -49,9 +49,9 @@ import {
         <div class="card mb-6">
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-petroleum-700/20 border border-petroleum-700/40
+              <div class="w-12 h-12 rounded-xl bg-brand-700/20 border border-brand-700/40
                           flex items-center justify-center flex-shrink-0">
-                <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current text-petroleum-400">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current text-brand-400">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
               </div>
@@ -66,7 +66,7 @@ import {
                 {{ statusLabel(usage()!.status) }}
               </span>
               <a routerLink="/billing/dashboard"
-                 class="text-xs text-petroleum-400 hover:text-petroleum-300 transition-colors">
+                 class="text-xs text-brand-400 hover:text-brand-300 transition-colors">
                 Ver faturas →
               </a>
             </div>
@@ -191,8 +191,8 @@ import {
                   </span>
                   <span class="text-sm text-slate-200">{{ f.label }}</span>
                   @if (!f.includedInPlan) {
-                    <span class="text-xs text-safety-500 border border-safety-600/30
-                                 bg-safety-600/10 px-1.5 py-0.5 rounded">
+                    <span class="text-xs text-gold-500 border border-gold-600/30
+                                 bg-gold-600/10 px-1.5 py-0.5 rounded">
                       Plano superior
                     </span>
                   }
@@ -211,7 +211,7 @@ import {
 
         <!-- Banner de upgrade -->
         @if (canUpgrade()) {
-          <div class="mt-6 rounded-xl border border-petroleum-600/30 bg-petroleum-900/20 p-5
+          <div class="mt-6 rounded-xl border border-brand-600/30 bg-brand-900/20 p-5
                       flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <p class="text-sm font-semibold text-slate-200">
@@ -301,13 +301,13 @@ export class PlanUsageComponent implements OnInit {
 
   progressColor(pct: number): string {
     if (pct >= 90) return 'bg-danger-500';
-    if (pct >= 70) return 'bg-safety-500';
-    return 'bg-petroleum-500';
+    if (pct >= 70) return 'bg-gold-500';
+    return 'bg-brand-500';
   }
 
   progressTextColor(pct: number): string {
     if (pct >= 90) return 'text-danger-400';
-    if (pct >= 70) return 'text-safety-400';
+    if (pct >= 70) return 'text-gold-400';
     return 'text-slate-500';
   }
 

@@ -21,14 +21,14 @@ import { ProducaoMecanicoResponse } from '@core/models/meta.model';
         <div class="flex items-center gap-2">
           <select [(ngModel)]="mesSelecionado" (ngModelChange)="carregar()"
             class="bg-surface-800 border border-surface-600 text-slate-300 text-sm rounded-lg
-                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-petroleum-500">
+                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
             @for (m of meses; track m.valor) {
               <option [value]="m.valor">{{ m.label }}</option>
             }
           </select>
           <select [(ngModel)]="anoSelecionado" (ngModelChange)="carregar()"
             class="bg-surface-800 border border-surface-600 text-slate-300 text-sm rounded-lg
-                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-petroleum-500">
+                   px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
             @for (a of anos; track a) {
               <option [value]="a">{{ a }}</option>
             }
@@ -39,7 +39,7 @@ import { ProducaoMecanicoResponse } from '@core/models/meta.model';
       <!-- Loading -->
       @if (carregando()) {
         <div class="flex justify-center py-12">
-          <div class="w-8 h-8 border-2 border-petroleum-500 border-t-transparent rounded-full animate-spin"></div>
+          <div class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       }
 
@@ -72,7 +72,7 @@ import { ProducaoMecanicoResponse } from '@core/models/meta.model';
             <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">% Atingido</p>
             <p class="text-2xl font-bold"
                [class.text-emerald-400]="p.metaBatida"
-               [class.text-safety-400]="!p.metaBatida && p.valorMeta != null"
+               [class.text-gold-400]="!p.metaBatida && p.valorMeta != null"
                [class.text-slate-400]="p.valorMeta == null">
               {{ p.valorMeta != null ? (p.percentualAtingido | number:'1.1-1') + '%' : '—' }}
             </p>
@@ -87,14 +87,14 @@ import { ProducaoMecanicoResponse } from '@core/models/meta.model';
               <span class="text-sm font-bold px-2 py-0.5 rounded-full"
                     [ngClass]="p.metaBatida
                       ? {'bg-emerald-500/20': true, 'text-emerald-400': true}
-                      : {'bg-safety-500/20': true,  'text-safety-400':  true}">
+                      : {'bg-gold-500/20': true,  'text-gold-400':  true}">
                 {{ p.metaBatida ? 'Meta atingida!' : 'Em andamento' }}
               </span>
             </div>
             <div class="w-full bg-surface-700 rounded-full h-3">
               <div class="h-3 rounded-full transition-all duration-700"
                    [class.bg-emerald-500]="p.metaBatida"
-                   [class.bg-petroleum-500]="!p.metaBatida"
+                   [class.bg-brand-500]="!p.metaBatida"
                    [style.width.%]="progressoExibido(p.percentualAtingido)">
               </div>
             </div>
