@@ -6,16 +6,16 @@ Deploy cirúrgico do backend na mesma VPS do RiggingCheck, sem derrubar nenhum s
 
 ## Diagnóstico da Stack
 
-| Item | Valor |
-|------|-------|
-| Runtime | Java 21 (eclipse-temurin:21-jre-alpine) |
-| Framework | Spring Boot 3.3.2 |
-| Build | Maven 3.9 (multi-stage Docker) |
-| Banco (prod) | PostgreSQL 15 — container `risecode_postgres` |
-| Banco (dev) | `pitstop_dev` (docker-compose.yml local) |
-| Porta interna | **8080** |
-| Flyway | 10 migrações (V1–V10) |
-| Storage | AWS S3 / Cloudflare R2 (MinIO só em dev) |
+| Item          | Valor                                         |
+| ------------- | --------------------------------------------- |
+| Runtime       | Java 21 (eclipse-temurin:21-jre-alpine)       |
+| Framework     | Spring Boot 3.3.2                             |
+| Build         | Maven 3.9 (multi-stage Docker)                |
+| Banco (prod)  | PostgreSQL 15 — container `risecode_postgres` |
+| Banco (dev)   | `pitstop_dev` (docker-compose.yml local)      |
+| Porta interna | **8080**                                      |
+| Flyway        | 10 migrações (V1–V10)                         |
+| Storage       | AWS S3 / Cloudflare R2 (MinIO só em dev)      |
 
 ---
 
@@ -37,6 +37,7 @@ VPS 2.25.151.136
 ## Passo 0 — Pré-requisitos
 
 ### DNS
+
 Antes de qualquer coisa, crie os registros A no painel de DNS:
 
 ```
@@ -47,6 +48,7 @@ managerpitstop.com.br      →  IP da Vercel (frontend)
 Aguarde propagação (geralmente 1–5 min na Hostinger).
 
 ### Verificar redes existentes na VPS
+
 ```bash
 docker network ls
 # Deve listar: risecode_default, riggingcheck_network
@@ -86,7 +88,7 @@ GRANT ALL ON SCHEMA public TO managerpitstop_user;
 ```bash
 # Se for o primeiro deploy:
 cd /opt
-git clone https://github.com/SEU_USUARIO/Manutex-PitStop-Manager.git managerpitstop
+git clone https://github.com/MatheusHenrique11/pitstop-manager.git managerpitstop
 cd /opt/managerpitstop
 
 # Se for atualização:
@@ -146,6 +148,7 @@ docker compose -f docker-compose.prod.yml --env-file .env.production config
 ```
 
 Confirmar que:
+
 - `DB_URL` aponta para `risecode_postgres:5432/managerpitstop_db`
 - `CORS_ALLOWED_ORIGINS` = `https://managerpitstop.com.br`
 - Sem variáveis em branco obrigatórias
@@ -167,6 +170,7 @@ docker logs -f managerpitstop_backend
 ```
 
 Aguardar a linha:
+
 ```
 Started PitstopBackendApplication in X.XXX seconds
 ```
@@ -218,14 +222,15 @@ curl -I https://managerpitstop.com.br
 O Angular usa `environment.prod.ts` com a `apiUrl` hardcoded — **não são necessárias variáveis de ambiente no painel da Vercel** para o funcionamento básico.
 
 A URL da API já está definida em [frontend/src/environments/environment.prod.ts](frontend/src/environments/environment.prod.ts):
+
 ```ts
-apiUrl: 'https://api.managerpitstop.com.br/api/v1'
+apiUrl: "https://api.managerpitstop.com.br/api/v1";
 ```
 
 Se precisar alterar o domínio da API sem fazer commit, configure via Vercel Dashboard:
 
-| Variável | Quando usar |
-|----------|-------------|
+| Variável                | Quando usar                                   |
+| ----------------------- | --------------------------------------------- |
 | _(nenhuma obrigatória)_ | O build usa `environment.prod.ts` diretamente |
 
 Após qualquer mudança no frontend, o Vercel faz redeploy automático via git push para `main`.
@@ -258,6 +263,7 @@ docker compose -f docker-compose.prod.yml down
 ```
 
 Para restaurar um backup:
+
 ```bash
 # Listar backups
 ls /opt/managerpitstop/backups/
@@ -271,13 +277,13 @@ gunzip -c /opt/managerpitstop/backups/managerpitstop_YYYYMMDD_HHMMSS.sql.gz \
 
 ## Arquivos criados por este deploy
 
-| Arquivo | Descrição |
-|---------|-----------|
-| `backend/src/main/resources/application-prod.yml` | Profile Spring de produção |
-| `docker-compose.prod.yml` | Compose de produção (sem Postgres, com Traefik labels) |
-| `.env.production.example` | Template das variáveis de ambiente |
-| `backup-pitstop.sh` | Script de backup com retenção de 30 dias |
-| `DEPLOY.md` | Este documento |
+| Arquivo                                           | Descrição                                              |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| `backend/src/main/resources/application-prod.yml` | Profile Spring de produção                             |
+| `docker-compose.prod.yml`                         | Compose de produção (sem Postgres, com Traefik labels) |
+| `.env.production.example`                         | Template das variáveis de ambiente                     |
+| `backup-pitstop.sh`                               | Script de backup com retenção de 30 dias               |
+| `DEPLOY.md`                                       | Este documento                                         |
 
 Arquivos **não alterados**: `docker-compose.yml` (dev), `backend/Dockerfile`, `.dockerignore`, regras de negócio, frontend.
 
@@ -300,11 +306,11 @@ Arquivos **não alterados**: `docker-compose.yml` (dev), `backend/Dockerfile`, `
 
 ## Riscos restantes
 
-| Risco | Mitigação |
-|-------|-----------|
-| Traefik não descobre o container | Confirmar que o label `traefik.docker.network=riggingcheck_network` está correto; inspecionar com `docker inspect traefik` |
-| Porta 8080 já em uso na VPS | `ss -tlnp | grep 8080` — o container usa rede interna, sem bind de porta |
-| Flyway detecta checksum diferente | Nunca editar migrações já aplicadas em prod |
-| Storage S3 não configurado | Documentos não serão salvos; configure `AWS_*` antes de testar upload |
-| `managerpitstop_db` já existe | Pular o `CREATE` que falhou e executar apenas os `GRANT`s |
-| Memória insuficiente | JVM configurada para 256–512 MB (`JAVA_OPTS` no Dockerfile); verificar com `free -h` |
+| Risco                             | Mitigação                                                                                                                  |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Traefik não descobre o container  | Confirmar que o label `traefik.docker.network=riggingcheck_network` está correto; inspecionar com `docker inspect traefik` |
+| Porta 8080 já em uso na VPS       | `ss -tlnp                                                                                                                  | grep 8080` — o container usa rede interna, sem bind de porta |
+| Flyway detecta checksum diferente | Nunca editar migrações já aplicadas em prod                                                                                |
+| Storage S3 não configurado        | Documentos não serão salvos; configure `AWS_*` antes de testar upload                                                      |
+| `managerpitstop_db` já existe     | Pular o `CREATE` que falhou e executar apenas os `GRANT`s                                                                  |
+| Memória insuficiente              | JVM configurada para 256–512 MB (`JAVA_OPTS` no Dockerfile); verificar com `free -h`                                       |

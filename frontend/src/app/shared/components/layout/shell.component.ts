@@ -39,7 +39,7 @@ interface NavItem {
         <!-- Logo -->
         <div class="px-5 py-4 border-b border-surface-700 flex items-center gap-3">
           <img src="assets/logo.png" alt="PitStop Manager"
-               class="w-9 h-9 object-contain flex-shrink-0" />
+               class="w-10 h-10 object-contain flex-shrink-0" />
           <div>
             <p class="text-sm font-bold text-white leading-tight">PitStop</p>
             <p class="text-xs text-slate-500 leading-tight">Manager</p>

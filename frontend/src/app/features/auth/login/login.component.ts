@@ -28,7 +28,7 @@ import { AuthService } from '@core/services/auth.service';
         <!-- Logo -->
         <div class="relative z-10 flex items-center gap-3">
           <img src="assets/logo.png" alt="PitStop Manager"
-               class="w-12 h-12 object-contain flex-shrink-0" />
+               class="w-14 h-14 object-contain flex-shrink-0" />
           <div>
             <p class="font-bold text-white text-lg leading-none">PitStop Manager</p>
             <p class="text-xs text-slate-500">by RiseCode Studio</p>
@@ -44,7 +44,7 @@ import { AuthService } from '@core/services/auth.service';
               Automotivas
             </h2>
             <p class="mt-4 text-slate-400 text-base leading-relaxed max-w-sm">
-              Controle ordens de serviço, frotas e consulte documentos de veículos direto no Detran com segurança e eficiência.
+              Controle ordens de serviço, frotas e o cofre de documentos dos veículos com segurança e eficiência.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ import { AuthService } from '@core/services/auth.service';
           <!-- Mobile logo -->
           <div class="lg:hidden text-center">
             <img src="assets/logo.png" alt="PitStop Manager"
-                 class="w-16 h-16 object-contain mx-auto mb-3" />
+                 class="w-20 h-20 object-contain mx-auto mb-3" />
             <h1 class="text-2xl font-bold text-white">PitStop Manager</h1>
           </div>
 
@@ -223,7 +223,7 @@ export class LoginComponent {
   readonly showPassword = signal(false);
 
   readonly year = new Date().getFullYear();
-  readonly tags = ['OS Digitais', 'Integração Detran', 'Carros e Caminhões'];
+  readonly tags = ['OS Digitais', 'Rastreio para o Cliente', 'Carros e Caminhões'];
 
   readonly form = this.fb.group({
     email:    ['', [Validators.required, Validators.email]],

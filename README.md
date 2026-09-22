@@ -8,7 +8,7 @@
 
 Centralize ordens de serviço, clientes, veículos, documentos, faturamento, metas e acompanhamento do cliente em uma única plataforma moderna, segura e escalável.
 
-*Desenvolvido pela [RiseCode Studio](https://risecodestudio.com.br)*
+_Desenvolvido pela [RiseCode Studio](https://risecodestudio.com.br)_
 
 ---
 
@@ -66,15 +66,15 @@ Centralize ordens de serviço, clientes, veículos, documentos, faturamento, met
 
 A maioria das oficinas mecânicas ainda opera com processos manuais, desconectados e sem rastreabilidade:
 
-| Problema Real | Impacto na Oficina | Como o PitStop Manager Resolve |
-|---|---|---|
-| Controle em papel ou planilhas | OS perdidas, retrabalho, erros | Gestão digital centralizada com ciclo completo de status |
-| Falta de comunicação com o cliente | Reclamações, perda de confiança | Portal de rastreamento público com token único por OS |
-| Sem histórico de veículos | Perda de informação, diagnósticos errados | Histórico completo por veículo com todos os serviços |
-| Documentos espalhados | CRLV vencido, laudos perdidos | Cofre digital criptografado com controle de validade |
-| Sem indicadores gerenciais | Decisões no escuro, meta impossível de medir | Dashboard com KPIs e relatórios por mecânico e período |
+| Problema Real                       | Impacto na Oficina                              | Como o PitStop Manager Resolve                                |
+| ----------------------------------- | ----------------------------------------------- | ------------------------------------------------------------- |
+| Controle em papel ou planilhas      | OS perdidas, retrabalho, erros                  | Gestão digital centralizada com ciclo completo de status      |
+| Falta de comunicação com o cliente  | Reclamações, perda de confiança                 | Portal de rastreamento público com token único por OS         |
+| Sem histórico de veículos           | Perda de informação, diagnósticos errados       | Histórico completo por veículo com todos os serviços          |
+| Documentos espalhados               | CRLV vencido, laudos perdidos                   | Cofre digital criptografado com controle de validade          |
+| Sem indicadores gerenciais          | Decisões no escuro, meta impossível de medir    | Dashboard com KPIs e relatórios por mecânico e período        |
 | Controle financeiro descentralizado | Faturamento inconsistente, sem histórico fiscal | NFS-e automática, dashboard financeiro e histórico de faturas |
-| Dificuldade em gerir equipe | Mecânicos sem meta clara, sem reconhecimento | Módulo de metas mensais por mecânico com relatório PDF |
+| Dificuldade em gerir equipe         | Mecânicos sem meta clara, sem reconhecimento    | Módulo de metas mensais por mecânico com relatório PDF        |
 
 ---
 
@@ -82,18 +82,18 @@ A maioria das oficinas mecânicas ainda opera com processos manuais, desconectad
 
 <div align="center">
 
-| | Benefício | Descrição |
-|---|---|---|
-| 🔩 | **Gestão Completa de OS** | Do orçamento à conclusão, com relatório e rastreio público |
-| 🚗 | **Controle de Frota** | Cadastro de veículos com histórico, documentos e alertas |
-| 📄 | **Cofre de Documentos** | Upload seguro, criptografado, com controle de validade |
-| 📊 | **Relatórios Gerenciais** | KPIs por período, mecânico, status e valor |
-| 🎯 | **Metas por Mecânico** | Acompanhamento em tempo real + relatório para RH |
-| 💰 | **Financeiro Integrado** | Histórico de OS concluídas, valores e faturamento |
-| 🧾 | **NFS-e Automática** | Emissão fiscal automática a cada pagamento confirmado |
-| 🔒 | **Segurança Corporativa** | AES-256, JWT, RBAC, auditoria completa |
-| 🏢 | **Multi-Empresa** | Cada oficina é um tenant isolado, pronto para rede de franquias |
-| 📱 | **100% Responsivo** | Acesso completo de celular, tablet ou computador |
+|     | Benefício                 | Descrição                                                       |
+| --- | ------------------------- | --------------------------------------------------------------- |
+| 🔩  | **Gestão Completa de OS** | Do orçamento à conclusão, com relatório e rastreio público      |
+| 🚗  | **Controle de Frota**     | Cadastro de veículos com histórico, documentos e alertas        |
+| 📄  | **Cofre de Documentos**   | Upload seguro, criptografado, com controle de validade          |
+| 📊  | **Relatórios Gerenciais** (em breve) | KPIs por período, mecânico, status e valor                      |
+| 🎯  | **Metas por Mecânico**    | Acompanhamento em tempo real + relatório para RH                |
+| 💰  | **Financeiro Integrado**  | Histórico de OS concluídas, valores e faturamento               |
+| 🧾  | **NFS-e Automática**      | Emissão fiscal automática a cada pagamento confirmado           |
+| 🔒  | **Segurança Corporativa** | AES-256, JWT, RBAC, auditoria completa                          |
+| 🏢  | **Multi-Empresa**         | Cada oficina é um tenant isolado, pronto para rede de franquias |
+| 📱  | **100% Responsivo**       | Acesso completo de celular, tablet ou computador                |
 
 </div>
 
@@ -105,15 +105,15 @@ A maioria das oficinas mecânicas ainda opera com processos manuais, desconectad
 
 <div align="center">
 
-| Dashboard | Ordens de Serviço |
-|:-:|:-:|
-| ![Dashboard](docs/images/dashboard.png) | ![OS](docs/images/os.png) |
-| *KPIs e visão geral da operação* | *Gestão completa do ciclo de vida da OS* |
+|                Dashboard                |            Ordens de Serviço             |
+| :-------------------------------------: | :--------------------------------------: |
+| ![Dashboard](docs/images/dashboard.png) |        ![OS](docs/images/os.png)         |
+|    _KPIs e visão geral da operação_     | _Gestão completa do ciclo de vida da OS_ |
 
-| Rastreio Público | Financeiro |
-|:-:|:-:|
-| ![Tracking](docs/images/tracking.png) | ![Financeiro](docs/images/financeiro.png) |
-| *Portal de acompanhamento para o cliente final* | *Visão financeira por período* |
+|                Rastreio Público                 |                Financeiro                 |
+| :---------------------------------------------: | :---------------------------------------: |
+|      ![Tracking](docs/images/tracking.png)      | ![Financeiro](docs/images/financeiro.png) |
+| _Portal de acompanhamento para o cliente final_ |      _Visão financeira por período_       |
 
 </div>
 
@@ -123,50 +123,50 @@ A maioria das oficinas mecânicas ainda opera com processos manuais, desconectad
 
 ### Gestão Operacional
 
-| Módulo | Descrição | Plano |
-|---|---|---|
-| **Ordens de Serviço** | Abertura, atribuição, ciclo completo (Aberta → Em Andamento → Concluída) e relatório PDF | Todos |
-| **Rastreio Público** | Link com token único para o cliente acompanhar a OS sem login | Todos |
-| **Gestão de Veículos** | Placa, chassi, RENAVAM, marca/modelo e histórico de serviços | Starter+ |
-| **Clientes** | CPF/CNPJ, telefone, e-mail com mascaramento por perfil | Todos |
-| **Cofre de Documentos** | CRLV, laudos e documentos com pipeline AES-256-GCM + S3 | Starter+ |
+| Módulo                  | Descrição                                                                                | Plano    |
+| ----------------------- | ---------------------------------------------------------------------------------------- | -------- |
+| **Ordens de Serviço**   | Abertura, atribuição, ciclo completo (Aberta → Em Andamento → Concluída) e relatório PDF | Todos    |
+| **Rastreio Público**    | Link com token único para o cliente acompanhar a OS sem login                            | Todos    |
+| **Gestão de Veículos**  | Placa, chassi, RENAVAM, marca/modelo e histórico de serviços                             | Starter+ |
+| **Clientes**            | CPF/CNPJ, telefone, e-mail com mascaramento por perfil                                   | Todos    |
+| **Cofre de Documentos** | CRLV, laudos e documentos com pipeline AES-256-GCM + S3                                  | Starter+ |
 
 ### Gestão de Pessoas e Metas
 
-| Módulo | Descrição | Plano |
-|---|---|---|
-| **Metas por Mecânico** | Metas mensais, acompanhamento em tempo real e relatório PDF | Professional+ |
-| **Gestão de Usuários** | Criação, ativação e perfis (GERENTE, MECÂNICO, RECEPCIONISTA) | Todos |
+| Módulo                 | Descrição                                                     | Plano         |
+| ---------------------- | ------------------------------------------------------------- | ------------- |
+| **Metas por Mecânico** | Metas mensais, acompanhamento em tempo real e relatório PDF   | Professional+ |
+| **Gestão de Usuários** | Criação, ativação e perfis (GERENTE, MECÂNICO, RECEPCIONISTA) | Todos         |
 
 ### Financeiro e Faturamento
 
-| Módulo | Descrição | Plano |
-|---|---|---|
-| **Módulo Financeiro** | Visão consolidada das OS por período e valor | Professional+ |
-| **Assinaturas** | Starter / Professional / Enterprise via Stripe | — |
-| **NFS-e Automática** | Emissão Focus NFe a cada `invoice.paid` com idempotência | Todos |
-| **Dashboard de Faturamento** | Histórico com download de PDF/XML das NFS-e | Todos |
+| Módulo                       | Descrição                                                | Plano         |
+| ---------------------------- | -------------------------------------------------------- | ------------- |
+| **Módulo Financeiro**        | Visão consolidada das OS por período e valor             | Professional+ |
+| **Assinaturas**              | Starter / Professional / Enterprise via Stripe           | —             |
+| **NFS-e Automática**         | Emissão Focus NFe a cada `invoice.paid` com idempotência | Todos         |
+| **Dashboard de Faturamento** | Histórico com download de PDF/XML das NFS-e              | Todos         |
 
 ### Análise e Administração
 
-| Módulo | Descrição | Plano |
-|---|---|---|
-| **Dashboard** | KPIs: OS abertas, em andamento, concluídas e valor total | Todos |
-| **Relatórios** | Análises por período, mecânico e serviço | Professional+ |
-| **Feature Flags** | Toggle de módulos em tempo real via painel Angular | Admin |
-| **Uso do Plano** | Métricas de consumo com barras de progresso e aviso de limite | Admin/Gerente |
-| **Auto-cadastro** | Signup público com validação matemática de CNPJ e BrasilAPI | — |
+| Módulo            | Descrição                                                     | Plano         |
+| ----------------- | ------------------------------------------------------------- | ------------- |
+| **Dashboard**     | KPIs: OS abertas, em andamento, concluídas e valor total      | Todos         |
+| **Relatórios** (em breve) | Análises por período, mecânico e serviço                      | Professional+ |
+| **Feature Flags** | Toggle de módulos em tempo real via painel Angular            | Admin         |
+| **Uso do Plano**  | Métricas de consumo com barras de progresso e aviso de limite | Admin/Gerente |
+| **Auto-cadastro** | Signup público com validação matemática de CNPJ e BrasilAPI   | —             |
 
 ### Privacidade e LGPD
 
-| Módulo | Descrição |
-|---|---|
-| **Consentimento** | Coleta por versão de política com IP e user-agent — Art. 8 |
-| **Portal do Titular** | Acesso, portabilidade, correção, anonimização — Art. 18 |
-| **Exportação de Dados** | JSON estruturado completo (portabilidade) |
-| **Anonimização** | Substituição de PII + revogação de sessões + `deleted_at` |
-| **Retenção Automática** | Hard-delete após 90 dias + limpeza de tokens expirados |
-| **Audit Log** | Registro imutável de todas as operações sobre dados pessoais |
+| Módulo                  | Descrição                                                    |
+| ----------------------- | ------------------------------------------------------------ |
+| **Consentimento**       | Coleta por versão de política com IP e user-agent — Art. 8   |
+| **Portal do Titular**   | Acesso, portabilidade, correção, anonimização — Art. 18      |
+| **Exportação de Dados** | JSON estruturado completo (portabilidade)                    |
+| **Anonimização**        | Substituição de PII + revogação de sessões + `deleted_at`    |
+| **Retenção Automática** | Hard-delete após 90 dias + limpeza de tokens expirados       |
+| **Audit Log**           | Registro imutável de todas as operações sobre dados pessoais |
 
 ---
 
@@ -174,19 +174,22 @@ A maioria das oficinas mecânicas ainda opera com processos manuais, desconectad
 
 O enforcement é aplicado **no backend** antes de cada operação. Ultrapassar o limite retorna `HTTP 402 Payment Required`.
 
-| Recurso | STARTER | PROFESSIONAL | ENTERPRISE |
-|---|:---:|:---:|:---:|
-| **Preço** | R$ 89/mês | R$ 179/mês | R$ 349/mês |
-| **OS por mês** | 50 | Ilimitado | Ilimitado |
-| **Mecânicos ativos** | 2 | Ilimitado | Ilimitado |
-| **Armazenamento** | 5 GB | 50 GB | Ilimitado |
-| Gestão de Veículos | ✅ | ✅ | ✅ |
-| Cofre de Documentos | ✅ | ✅ | ✅ |
-| Metas / Financeiro / Relatórios | ❌ | ✅ | ✅ |
-| Notificações | ❌ | ✅ | ✅ |
-| Integração DETRAN | ❌ | ❌ | ✅ |
-| API Pública | ❌ | ❌ | ✅ |
-| SLA Garantido | ❌ | ❌ | 99,9% |
+| Recurso                         |  STARTER  | PROFESSIONAL | ENTERPRISE |
+| ------------------------------- | :-------: | :----------: | :--------: |
+| **Preço**                       | R$ 89/mês |  R$ 179/mês  | R$ 349/mês |
+| **OS por mês**                  |    50     |  Ilimitado   | Ilimitado  |
+| **Mecânicos ativos**            |     2     |  Ilimitado   | Ilimitado  |
+| **Armazenamento**               |   5 GB    |    50 GB     | Ilimitado  |
+| Gestão de Veículos              |    ✅     |      ✅      |     ✅     |
+| Cofre de Documentos             |    ✅     |      ✅      |     ✅     |
+| Metas / Financeiro               |    ❌     |      ✅      |     ✅     |
+| Relatórios                       |    ❌     |      🔜      |     🔜     |
+| Notificações                    |    ❌     |      ✅      |     ✅     |
+| Integração DETRAN               |    ❌     |      ❌      |     🔜     |
+| API Pública                     |    ❌     |      ❌      |     🔜     |
+| SLA Garantido                   |    ❌     |      ❌      |   99,9%    |
+
+> 🔜 = em desenvolvimento/roadmap — ainda não disponível para uso.
 
 > **Como funciona:** ao confirmar o pagamento via webhook Stripe, o `PlanEnforcementService` ativa automaticamente as feature flags do plano e desativa as demais. Nenhuma intervenção manual necessária.
 
@@ -341,20 +344,20 @@ Togglz persiste o estado das flags no banco. Ao confirmar um pagamento, `PlanEnf
 
 ### Camadas de Segurança
 
-| Camada | Mecanismo | Detalhe |
-|---|---|---|
-| **Autenticação** | JWT + Refresh Rotation | Access token (15 min) + Refresh token (7 dias, hash SHA-256) |
-| **Sessão** | HttpOnly Cookie | `Secure + SameSite=None` — imune a XSS |
-| **Autorização** | RBAC via `@PreAuthorize` | Verificação por perfil em cada endpoint |
-| **Isolamento** | Multi-Tenant Context | `empresaId` e `userId` em todas as queries |
-| **Dados em Repouso** | AES-256-GCM | IV aleatório de 12 bytes por documento |
-| **Senhas** | BCrypt (custo 12) | Sem plain-text em nenhum ponto |
-| **Replay Attack** | Detecção de token reutilizado | Segundo uso do mesmo refresh revoga toda a família |
-| **Rate Limiting** | Bucket4j por IP | 60 req/min com header `X-RateLimit-Remaining` |
-| **Validação de Arquivo** | Magic Numbers | Não confia na extensão — verifica bytes reais do PDF |
-| **Webhook** | HMAC-SHA256 | Valida autenticidade de cada evento Stripe |
-| **Headers HTTP** | CSP + HSTS headers | `frame-ancestors 'none'`, Referrer-Policy, Permissions-Policy |
-| **Auditoria** | AuditLog imutável | Registro de todas as operações sobre dados pessoais |
+| Camada                   | Mecanismo                     | Detalhe                                                       |
+| ------------------------ | ----------------------------- | ------------------------------------------------------------- |
+| **Autenticação**         | JWT + Refresh Rotation        | Access token (15 min) + Refresh token (7 dias, hash SHA-256)  |
+| **Sessão**               | HttpOnly Cookie               | `Secure + SameSite=None` — imune a XSS                        |
+| **Autorização**          | RBAC via `@PreAuthorize`      | Verificação por perfil em cada endpoint                       |
+| **Isolamento**           | Multi-Tenant Context          | `empresaId` e `userId` em todas as queries                    |
+| **Dados em Repouso**     | AES-256-GCM                   | IV aleatório de 12 bytes por documento                        |
+| **Senhas**               | BCrypt (custo 12)             | Sem plain-text em nenhum ponto                                |
+| **Replay Attack**        | Detecção de token reutilizado | Segundo uso do mesmo refresh revoga toda a família            |
+| **Rate Limiting**        | Bucket4j por IP               | 60 req/min com header `X-RateLimit-Remaining`                 |
+| **Validação de Arquivo** | Magic Numbers                 | Não confia na extensão — verifica bytes reais do PDF          |
+| **Webhook**              | HMAC-SHA256                   | Valida autenticidade de cada evento Stripe                    |
+| **Headers HTTP**         | CSP + HSTS headers            | `frame-ancestors 'none'`, Referrer-Policy, Permissions-Policy |
+| **Auditoria**            | AuditLog imutável             | Registro de todas as operações sobre dados pessoais           |
 
 ---
 
@@ -362,17 +365,17 @@ Togglz persiste o estado das flags no banco. Ao confirmar um pagamento, `PlanEnf
 
 > O sistema foi projetado com **Privacy by Design** e **Data Protection by Design** desde a arquitetura.
 
-| Artigo | Requisito | Implementação |
-|---|---|---|
-| Art. 8 | Consentimento livre e informado | `UserConsent` com versão, IP e user-agent; tela `/consent` obrigatória antes do primeiro acesso |
-| Art. 9 | Transparência no tratamento | Política de Privacidade e Termos de Uso públicos e versionados |
-| Art. 15 | Encerramento do tratamento | `DataRetentionService`: hard-delete automático após 90 dias |
-| Art. 18, I–II | Acesso e confirmação | `GET /api/v1/lgpd/my-data` exporta JSON completo com todos os dados |
-| Art. 18, III | Correção de dados | DSAR tipo `CORRECTION` com prazo de 15 dias rastreável |
-| Art. 18, IV–VI | Anonimização e eliminação | `LgpdService.anonymizeUser()` substitui PII + revoga todas as sessões |
-| Art. 18, V | Portabilidade | Export estruturado para download imediato |
-| Art. 18, IX | Oposição ao tratamento | DSAR tipo `OBJECTION` com fluxo completo de resposta |
-| Art. 46 | Medidas de segurança | `AuditLog` imutável em 100% das operações sobre dados pessoais |
+| Artigo         | Requisito                       | Implementação                                                                                   |
+| -------------- | ------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Art. 8         | Consentimento livre e informado | `UserConsent` com versão, IP e user-agent; tela `/consent` obrigatória antes do primeiro acesso |
+| Art. 9         | Transparência no tratamento     | Política de Privacidade e Termos de Uso públicos e versionados                                  |
+| Art. 15        | Encerramento do tratamento      | `DataRetentionService`: hard-delete automático após 90 dias                                     |
+| Art. 18, I–II  | Acesso e confirmação            | `GET /api/v1/lgpd/my-data` exporta JSON completo com todos os dados                             |
+| Art. 18, III   | Correção de dados               | DSAR tipo `CORRECTION` com prazo de 15 dias rastreável                                          |
+| Art. 18, IV–VI | Anonimização e eliminação       | `LgpdService.anonymizeUser()` substitui PII + revoga todas as sessões                           |
+| Art. 18, V     | Portabilidade                   | Export estruturado para download imediato                                                       |
+| Art. 18, IX    | Oposição ao tratamento          | DSAR tipo `OBJECTION` com fluxo completo de resposta                                            |
+| Art. 46        | Medidas de segurança            | `AuditLog` imutável em 100% das operações sobre dados pessoais                                  |
 
 **DPO:** privacidade@risecodestudio.com.br · **ANPD:** [gov.br/anpd](https://www.gov.br/anpd)
 
@@ -382,46 +385,46 @@ Togglz persiste o estado das flags no banco. Ao confirmar um pagamento, `PlanEnf
 
 ### Backend
 
-| Tecnologia | Versão | Uso |
-|---|---|---|
-| Java | 21 (LTS) | Linguagem principal com Virtual Threads |
-| Spring Boot | 3.3.2 | Framework base, auto-configuration |
-| Spring Security | 6.x | JWT, RBAC, CORS, CSRF, headers de segurança |
-| Spring Data JPA | 3.x | ORM, repositórios, auditoria automática |
-| Hibernate | 6.x | `@SQLRestriction` para soft-delete transparente |
-| Flyway | 10.x | Migrations versionadas V1–V8 |
-| Togglz | 4.x | Feature flags persistidas no banco |
-| Bucket4j | 8.x | Rate limiting por IP |
-| OpenPDF | 1.x | Geração de relatórios PDF de metas |
-| jjwt | 0.12.x | JWT com HS512 |
-| Hibernate Validator | 8.x | `@CNPJ`, `@CPF`, `@Placa`, `@Chassi`, `@Renavam` |
+| Tecnologia          | Versão   | Uso                                              |
+| ------------------- | -------- | ------------------------------------------------ |
+| Java                | 21 (LTS) | Linguagem principal com Virtual Threads          |
+| Spring Boot         | 3.3.2    | Framework base, auto-configuration               |
+| Spring Security     | 6.x      | JWT, RBAC, CORS, CSRF, headers de segurança      |
+| Spring Data JPA     | 3.x      | ORM, repositórios, auditoria automática          |
+| Hibernate           | 6.x      | `@SQLRestriction` para soft-delete transparente  |
+| Flyway              | 10.x     | Migrations versionadas V1–V8                     |
+| Togglz              | 4.x      | Feature flags persistidas no banco               |
+| Bucket4j            | 8.x      | Rate limiting por IP                             |
+| OpenPDF             | 1.x      | Geração de relatórios PDF de metas               |
+| jjwt                | 0.12.x   | JWT com HS512                                    |
+| Hibernate Validator | 8.x      | `@CNPJ`, `@CPF`, `@Placa`, `@Chassi`, `@Renavam` |
 
 ### Frontend
 
-| Tecnologia | Versão | Uso |
-|---|---|---|
-| Angular | 17 | Framework SPA com Standalone Components |
-| Signals | (built-in) | Estado reativo sem RxJS para UI/auth/flags |
-| RxJS | 7.8 | HTTP, Guards, Interceptors |
-| Reactive Forms | (built-in) | Formulários com validadores customizados |
-| Tailwind CSS | 3.x | Design system com paleta `petroleum/safety/surface` |
-| Karma + Jasmine | — | Testes unitários de componentes e serviços |
+| Tecnologia      | Versão     | Uso                                                 |
+| --------------- | ---------- | --------------------------------------------------- |
+| Angular         | 17         | Framework SPA com Standalone Components             |
+| Signals         | (built-in) | Estado reativo sem RxJS para UI/auth/flags          |
+| RxJS            | 7.8        | HTTP, Guards, Interceptors                          |
+| Reactive Forms  | (built-in) | Formulários com validadores customizados            |
+| Tailwind CSS    | 3.x        | Design system com paleta `petroleum/safety/surface` |
+| Karma + Jasmine | —          | Testes unitários de componentes e serviços          |
 
 ### Banco de Dados e Storage
 
-| Tecnologia | Uso |
-|---|---|
-| PostgreSQL 15 | Banco relacional principal |
-| MinIO | Object storage S3-compatível para documentos cifrados |
-| Flyway | Versionamento e rastreabilidade das migrações |
+| Tecnologia    | Uso                                                   |
+| ------------- | ----------------------------------------------------- |
+| PostgreSQL 15 | Banco relacional principal                            |
+| MinIO         | Object storage S3-compatível para documentos cifrados |
+| Flyway        | Versionamento e rastreabilidade das migrações         |
 
 ### Integrações Externas
 
-| Integração | Finalidade | Resiliência |
-|---|---|---|
-| **Stripe** | Pagamentos, checkout, webhooks | Validação HMAC-SHA256; idempotência por `gatewayInvoiceId` |
-| **Focus NFe** | Emissão automática de NFS-e | Mock local sem `FOCUS_NFE_TOKEN`; idempotência garantida |
-| **BrasilAPI** | Consulta de CNPJ (gratuita, sem chave) | Fallback gracioso em timeout |
+| Integração    | Finalidade                             | Resiliência                                                |
+| ------------- | -------------------------------------- | ---------------------------------------------------------- |
+| **Stripe**    | Pagamentos, checkout, webhooks         | Validação HMAC-SHA256; idempotência por `gatewayInvoiceId` |
+| **Focus NFe** | Emissão automática de NFS-e            | Mock local sem `FOCUS_NFE_TOKEN`; idempotência garantida   |
+| **BrasilAPI** | Consulta de CNPJ (gratuita, sem chave) | Fallback gracioso em timeout                               |
 
 ---
 
@@ -456,17 +459,17 @@ Togglz persiste o estado das flags no banco. Ao confirmar um pagamento, `PlanEnf
 
 ### Variáveis de Ambiente — Produção
 
-| Variável | Onde | Descrição |
-|---|---|---|
-| `VITE_API_URL` | Vercel | `https://api.managerpitstop.com.br/api` |
-| `DATABASE_URL` | VPS | JDBC URL do PostgreSQL |
-| `JWT_SECRET` | VPS | Segredo HS512 — mínimo 64 caracteres |
-| `ENCRYPTION_MASTER_KEY` | VPS | Chave AES-256 para documentos |
-| `CORS_ALLOWED_ORIGINS` | VPS | `https://managerpitstop.com.br` |
-| `STRIPE_SECRET_KEY` | VPS | Chave Stripe (mock sem ela) |
-| `STRIPE_WEBHOOK_SECRET` | VPS | Segredo HMAC-SHA256 |
-| `FOCUS_NFE_TOKEN` | VPS | Token Focus NFe (mock sem ele) |
-| `STORAGE_ENDPOINT` | VPS | Endpoint MinIO |
+| Variável                | Onde   | Descrição                               |
+| ----------------------- | ------ | --------------------------------------- |
+| `VITE_API_URL`          | Vercel | `https://api.managerpitstop.com.br/api` |
+| `DATABASE_URL`          | VPS    | JDBC URL do PostgreSQL                  |
+| `JWT_SECRET`            | VPS    | Segredo HS512 — mínimo 64 caracteres    |
+| `ENCRYPTION_MASTER_KEY` | VPS    | Chave AES-256 para documentos           |
+| `CORS_ALLOWED_ORIGINS`  | VPS    | `https://managerpitstop.com.br`         |
+| `STRIPE_SECRET_KEY`     | VPS    | Chave Stripe (mock sem ela)             |
+| `STRIPE_WEBHOOK_SECRET` | VPS    | Segredo HMAC-SHA256                     |
+| `FOCUS_NFE_TOKEN`       | VPS    | Token Focus NFe (mock sem ele)          |
+| `STORAGE_ENDPOINT`      | VPS    | Endpoint MinIO                          |
 
 ---
 
@@ -511,16 +514,16 @@ erDiagram
 
 ### Destaques Arquiteturais
 
-| Decisão | Implementação | Motivo |
-|---|---|---|
-| Multi-Tenant | `TenantContext` + claims JWT | Isolamento garantido por design, não por validação |
-| Feature Flags | Togglz + banco | Toggle em runtime sem redeploy |
-| Billing | Stripe + webhook | Receita automatizada, auditável e idempotente |
-| Storage | MinIO + AES-256-GCM | Zero confiança no provedor de armazenamento |
-| Migrações | Flyway versionado | Rastreabilidade e deploy seguro |
-| Frontend State | Angular Signals | Reatividade sem overhead do NgRx |
-| Testes | MockitoExtension + WebMvcTest | Cobertura em serviço, controller e filtro |
-| Exceções | ProblemDetail RFC 7807 | Contrato consistente para todos os erros |
+| Decisão        | Implementação                 | Motivo                                             |
+| -------------- | ----------------------------- | -------------------------------------------------- |
+| Multi-Tenant   | `TenantContext` + claims JWT  | Isolamento garantido por design, não por validação |
+| Feature Flags  | Togglz + banco                | Toggle em runtime sem redeploy                     |
+| Billing        | Stripe + webhook              | Receita automatizada, auditável e idempotente      |
+| Storage        | MinIO + AES-256-GCM           | Zero confiança no provedor de armazenamento        |
+| Migrações      | Flyway versionado             | Rastreabilidade e deploy seguro                    |
+| Frontend State | Angular Signals               | Reatividade sem overhead do NgRx                   |
+| Testes         | MockitoExtension + WebMvcTest | Cobertura em serviço, controller e filtro          |
+| Exceções       | ProblemDetail RFC 7807        | Contrato consistente para todos os erros           |
 
 ---
 
@@ -530,20 +533,20 @@ erDiagram
 
 ### Comparação com Sistemas Convencionais
 
-| Aplicação CRUD Comum | PitStop Manager |
-|---|---|
-| Login básico com sessão | JWT + Refresh Token Rotation + HttpOnly Cookie |
-| Perfis simples (admin/user) | RBAC corporativo (4 perfis com permissões granulares) |
-| Cadastro simples | SaaS Multi-Tenant com isolamento real por empresa |
-| Sem cobrança | Billing automatizado (Stripe → Webhook → NFS-e → Feature Flags) |
-| Sem LGPD | LGPD implementada: consentimento, portabilidade, anonimização, retenção |
-| Sem auditoria | Audit Log imutável em 100% das operações sobre PII |
-| Upload simples | Pipeline AES-256-GCM + verificação por Magic Numbers + S3 |
-| Sem integrações | Stripe + Focus NFe + BrasilAPI com resiliência e idempotência |
-| Sem controle de plano | PlanEnforcementService com enforcement no backend (HTTP 402) |
-| Sem feature flags | Togglz com ativação automática por plano via webhook |
-| Estrutura monolítica | Camadas bem definidas: Controller → Service → Repository → Domain |
-| Sem observabilidade | Audit logs, Actuator health, rate limit headers |
+| Aplicação CRUD Comum        | PitStop Manager                                                         |
+| --------------------------- | ----------------------------------------------------------------------- |
+| Login básico com sessão     | JWT + Refresh Token Rotation + HttpOnly Cookie                          |
+| Perfis simples (admin/user) | RBAC corporativo (4 perfis com permissões granulares)                   |
+| Cadastro simples            | SaaS Multi-Tenant com isolamento real por empresa                       |
+| Sem cobrança                | Billing automatizado (Stripe → Webhook → NFS-e → Feature Flags)         |
+| Sem LGPD                    | LGPD implementada: consentimento, portabilidade, anonimização, retenção |
+| Sem auditoria               | Audit Log imutável em 100% das operações sobre PII                      |
+| Upload simples              | Pipeline AES-256-GCM + verificação por Magic Numbers + S3               |
+| Sem integrações             | Stripe + Focus NFe + BrasilAPI com resiliência e idempotência           |
+| Sem controle de plano       | PlanEnforcementService com enforcement no backend (HTTP 402)            |
+| Sem feature flags           | Togglz com ativação automática por plano via webhook                    |
+| Estrutura monolítica        | Camadas bem definidas: Controller → Service → Repository → Domain       |
+| Sem observabilidade         | Audit logs, Actuator health, rate limit headers                         |
 
 ### Decisões que evidenciam senioridade
 
@@ -571,18 +574,18 @@ Angular 17 sem NgModule, lazy loading por rota via `loadComponent`, estado reati
 
 ## 🔬 Engineering Decisions & Trade-offs
 
-| Decisão | Alternativa Considerada | Escolha Final | Motivo |
-|---|---|---|---|
-| **State Management** | NgRx | Angular Signals | Menor boilerplate para escopo do projeto; Signals são nativos no Angular 17+ |
-| **Auth Storage** | localStorage | HttpOnly Cookie | XSS-safe por design; nunca exposto ao JavaScript |
-| **Refresh Token** | Armazenar raw no banco | Armazenar hash SHA-256 | Token comprometido no banco não permite reutilização |
-| **Multi-Tenant** | Schema por tenant | Row-level com `empresa_id` | Mais simples de operar; Flyway gerencia schema único |
-| **Feature Flags** | Variáveis de ambiente | Togglz + banco | Toggle em runtime sem redeploy; integrado ao billing |
-| **Criptografia de Docs** | SSE no S3 | AES-256-GCM no app + SSE | Zero trust no provedor; app tem controle total |
-| **Emissão Fiscal** | Manual | Focus NFe automatizado | Elimina trabalho operacional; auditável e idempotente |
-| **Validação de Arquivo** | Extensão do arquivo | Magic Numbers | Extensão é renomeável; Magic Numbers verificam o conteúdo real |
-| **Exceções HTTP** | Estrutura própria | ProblemDetail RFC 7807 | Padrão de mercado; compatível com qualquer cliente |
-| **Build Frontend** | Env vars em runtime | `set-env.js` em build time | Angular não lê env vars de runtime nativamente; build estático na Vercel |
+| Decisão                  | Alternativa Considerada | Escolha Final              | Motivo                                                                       |
+| ------------------------ | ----------------------- | -------------------------- | ---------------------------------------------------------------------------- |
+| **State Management**     | NgRx                    | Angular Signals            | Menor boilerplate para escopo do projeto; Signals são nativos no Angular 17+ |
+| **Auth Storage**         | localStorage            | HttpOnly Cookie            | XSS-safe por design; nunca exposto ao JavaScript                             |
+| **Refresh Token**        | Armazenar raw no banco  | Armazenar hash SHA-256     | Token comprometido no banco não permite reutilização                         |
+| **Multi-Tenant**         | Schema por tenant       | Row-level com `empresa_id` | Mais simples de operar; Flyway gerencia schema único                         |
+| **Feature Flags**        | Variáveis de ambiente   | Togglz + banco             | Toggle em runtime sem redeploy; integrado ao billing                         |
+| **Criptografia de Docs** | SSE no S3               | AES-256-GCM no app + SSE   | Zero trust no provedor; app tem controle total                               |
+| **Emissão Fiscal**       | Manual                  | Focus NFe automatizado     | Elimina trabalho operacional; auditável e idempotente                        |
+| **Validação de Arquivo** | Extensão do arquivo     | Magic Numbers              | Extensão é renomeável; Magic Numbers verificam o conteúdo real               |
+| **Exceções HTTP**        | Estrutura própria       | ProblemDetail RFC 7807     | Padrão de mercado; compatível com qualquer cliente                           |
+| **Build Frontend**       | Env vars em runtime     | `set-env.js` em build time | Angular não lê env vars de runtime nativamente; build estático na Vercel     |
 
 ---
 
@@ -590,14 +593,14 @@ Angular 17 sem NgModule, lazy loading por rota via `loadComponent`, estado reati
 
 O PitStop Manager foi projetado para:
 
-| Segmento | Perfil Típico | Plano Indicado |
-|---|---|---|
-| **Oficina Mecânica Geral** | 1–2 mecânicos, ~30 OS/mês | Starter |
-| **Auto Center** | 3–10 mecânicos, múltiplos serviços | Professional |
-| **Centro de Revisão** | Alto volume, múltiplos gerentes | Professional |
-| **Rede de Oficinas (Franquias)** | Multi-unidade, controle centralizado | Enterprise |
-| **Empresa de Manutenção de Frota** | Frota própria, documentação regulatória | Professional/Enterprise |
-| **Preparadora Automotiva** | Documentação técnica, laudos e histórico | Professional |
+| Segmento                           | Perfil Típico                            | Plano Indicado          |
+| ---------------------------------- | ---------------------------------------- | ----------------------- |
+| **Oficina Mecânica Geral**         | 1–2 mecânicos, ~30 OS/mês                | Starter                 |
+| **Auto Center**                    | 3–10 mecânicos, múltiplos serviços       | Professional            |
+| **Centro de Revisão**              | Alto volume, múltiplos gerentes          | Professional            |
+| **Rede de Oficinas (Franquias)**   | Multi-unidade, controle centralizado     | Enterprise              |
+| **Empresa de Manutenção de Frota** | Frota própria, documentação regulatória  | Professional/Enterprise |
+| **Preparadora Automotiva**         | Documentação técnica, laudos e histórico | Professional            |
 
 ---
 
@@ -615,11 +618,11 @@ O PitStop Manager foi projetado para:
 docker compose up -d
 ```
 
-| Serviço | URL | Credenciais |
-|---|---|---|
-| PostgreSQL | `localhost:5432` | Veja `.env.example` |
-| MinIO API | `localhost:9000` | `minioadmin / minioadmin` |
-| MinIO Console | `localhost:9001` | Interface web |
+| Serviço       | URL              | Credenciais               |
+| ------------- | ---------------- | ------------------------- |
+| PostgreSQL    | `localhost:5432` | Veja `.env.example`       |
+| MinIO API     | `localhost:9000` | `minioadmin / minioadmin` |
+| MinIO Console | `localhost:9001` | Interface web             |
 
 ### 2. Backend
 
@@ -659,11 +662,11 @@ Senha:   Demo@ManagerPitStop2025!
 cd backend && ./mvnw test
 ```
 
-| Suite | Ferramenta | Cobertura |
-|---|---|---|
-| Serviços | `MockitoExtension` | Regras de negócio, enforcement de plano, LGPD, billing |
-| Controllers | `@WebMvcTest` | Autorização por perfil, contratos HTTP, status codes |
-| Filtros | Mockito | Rate limiting, JWT, validação de entrada |
+| Suite       | Ferramenta         | Cobertura                                              |
+| ----------- | ------------------ | ------------------------------------------------------ |
+| Serviços    | `MockitoExtension` | Regras de negócio, enforcement de plano, LGPD, billing |
+| Controllers | `@WebMvcTest`      | Autorização por perfil, contratos HTTP, status codes   |
+| Filtros     | Mockito            | Rate limiting, JWT, validação de entrada               |
 
 ### Frontend
 
@@ -677,35 +680,35 @@ cd frontend && npm test   # requer ChromeHeadless
 
 ### Migrações Flyway
 
-| Versão | Descrição |
-|---|---|
+| Versão | Descrição                                                                                                         |
+| ------ | ----------------------------------------------------------------------------------------------------------------- |
 | **V1** | Schema inicial: `users`, `clientes`, `veiculos`, `documentos`, `manutencoes`, `refresh_tokens`, `feature_toggles` |
-| **V2** | Campos estendidos de manutenção + tabela `empresa_config` |
-| **V3** | `tracking_token` em `manutencoes` para rastreio público sem login |
-| **V4** | Multi-tenant: tabela `empresas` + `empresa_id` em `users` e `clientes` |
-| **V5** | Metas por mecânico: tabela `metas_mecanico` |
-| **V6** | Billing: `assinaturas`, `faturas_nfe`, campos de assinatura em `empresas` |
-| **V7** | Dados fiscais em `empresas` para emissão de NFS-e |
-| **V8** | LGPD: `deleted_at`, `user_consents`, `data_subject_requests`, `audit_logs` |
+| **V2** | Campos estendidos de manutenção + tabela `empresa_config`                                                         |
+| **V3** | `tracking_token` em `manutencoes` para rastreio público sem login                                                 |
+| **V4** | Multi-tenant: tabela `empresas` + `empresa_id` em `users` e `clientes`                                            |
+| **V5** | Metas por mecânico: tabela `metas_mecanico`                                                                       |
+| **V6** | Billing: `assinaturas`, `faturas_nfe`, campos de assinatura em `empresas`                                         |
+| **V7** | Dados fiscais em `empresas` para emissão de NFS-e                                                                 |
+| **V8** | LGPD: `deleted_at`, `user_consents`, `data_subject_requests`, `audit_logs`                                        |
 
 ---
 
 ## 🗺️ Roadmap
 
-| Feature | Status | Previsão |
-|---|---|---|
-| ✅ Multi-Tenant SaaS | **Produção** | — |
-| ✅ Billing Stripe + NFS-e | **Produção** | — |
-| ✅ LGPD Compliance | **Produção** | — |
-| ✅ Feature Flags por Plano | **Produção** | — |
-| ✅ Página de Uso do Plano | **Produção** | — |
-| 🔄 Notificações WhatsApp | Em desenvolvimento | Q3 2025 |
-| 🔄 App Mobile (React Native) | Em planejamento | Q4 2025 |
-| 📋 Dashboard BI Avançado | Planejado | Q1 2026 |
-| 📋 Integração DETRAN Online | Planejado | Q1 2026 |
-| 📋 API Pública para Integrações | Planejado | Q2 2026 |
-| 📋 Multi-Filial (Enterprise) | Planejado | Q2 2026 |
-| 📋 Integração com ERPs | Planejado | Q3 2026 |
+| Feature                         | Status             | Previsão |
+| ------------------------------- | ------------------ | -------- |
+| ✅ Multi-Tenant SaaS            | **Produção**       | —        |
+| ✅ Billing Stripe + NFS-e       | **Produção**       | —        |
+| ✅ LGPD Compliance              | **Produção**       | —        |
+| ✅ Feature Flags por Plano      | **Produção**       | —        |
+| ✅ Página de Uso do Plano       | **Produção**       | —        |
+| 🔄 Notificações WhatsApp        | Em desenvolvimento | Q3 2025  |
+| 🔄 App Mobile (React Native)    | Em planejamento    | Q4 2025  |
+| 📋 Dashboard BI Avançado        | Planejado          | Q1 2026  |
+| 📋 Integração DETRAN Online     | Planejado          | Q1 2026  |
+| 📋 API Pública para Integrações | Planejado          | Q2 2026  |
+| 📋 Multi-Filial (Enterprise)    | Planejado          | Q2 2026  |
+| 📋 Integração com ERPs          | Planejado          | Q3 2026  |
 
 ---
 
@@ -713,18 +716,18 @@ cd frontend && npm test   # requer ChromeHeadless
 
 <div align="center">
 
-| Métrica | Valor |
-|---|---|
-| Linhas de código (backend) | ~8.500 |
+| Métrica                     | Valor  |
+| --------------------------- | ------ |
+| Linhas de código (backend)  | ~8.500 |
 | Linhas de código (frontend) | ~6.200 |
-| Testes automatizados | 218 |
-| Endpoints REST | 45+ |
-| Migrações de banco | 8 |
-| Módulos de negócio | 12 |
-| Entidades de domínio | 15 |
-| Feature flags | 8 |
-| Perfis de acesso | 4 |
-| Integrações externas | 3 |
+| Testes automatizados        | 218    |
+| Endpoints REST              | 45+    |
+| Migrações de banco          | 8      |
+| Módulos de negócio          | 12     |
+| Entidades de domínio        | 15     |
+| Feature flags               | 8      |
+| Perfis de acesso            | 4      |
+| Integrações externas        | 3      |
 
 </div>
 
@@ -733,7 +736,7 @@ cd frontend && npm test   # requer ChromeHeadless
 ## 📁 Estrutura do Projeto
 
 ```
-PitStop-Manager/
+pitstop-manager/
 ├── backend/
 │   └── src/main/java/com/manutex/pitstop/
 │       ├── config/           # SecurityConfig, AppFeatures (Togglz), JpaAuditing
@@ -805,7 +808,7 @@ Antes de aceitar pagamentos reais e emitir NFS-e em produção, valide cada item
 
 ### Dados Fiscais da RiseCode Studio (Fluxo A — NFS-e SaaS)
 
-Configure via `POST /api/v1/admin/fiscal/platform` (ROLE_ADMIN) ou variáveis `PLATFORM_FISCAL_*`:
+Configure via `POST /api/v1/admin/fiscal/platform` (ROLE*ADMIN) ou variáveis `PLATFORM_FISCAL*\*`:
 
 - [ ] CNPJ da RiseCode Studio (`PLATFORM_FISCAL_CNPJ`)
 - [ ] Inscrição Municipal da RiseCode Studio (`PLATFORM_FISCAL_INSCRICAO_MUNICIPAL`)
@@ -843,10 +846,10 @@ Configure pela própria oficina via `/fiscal/config` (ROLE_GERENTE):
 
 **Desenvolvido com dedicação pela [RiseCode Studio](https://risecodestudio.com.br)**
 
-*Transformando operações em produtos digitais de alto desempenho.*
+_Transformando operações em produtos digitais de alto desempenho._
 
 ---
 
-*gestão de oficina · ordem de serviço · SaaS automotivo · oficina mecânica digital · automotive management system · fleet maintenance · Spring Boot SaaS · Angular SaaS · multi-tenant · oficina digital*
+_gestão de oficina · ordem de serviço · SaaS automotivo · oficina mecânica digital · automotive management system · fleet maintenance · Spring Boot SaaS · Angular SaaS · multi-tenant · oficina digital_
 
 </div>

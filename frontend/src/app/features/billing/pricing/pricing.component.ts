@@ -143,8 +143,8 @@ export class PricingComponent {
       recursos: [
         'Tudo do Profissional',
         'Multi-unidade (multi-tenant)',
-        'Integração com DETRAN',
-        'API pública',
+        'Integração com DETRAN (em breve)',
+        'API pública (em breve)',
         'Cofre ilimitado',
         'SLA garantido 99,9%',
         'Gerente de conta dedicado',

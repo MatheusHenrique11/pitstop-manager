@@ -6,9 +6,9 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png" />
-    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favico16x16.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <meta name="theme-color" content="#c0392b" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
@@ -27,8 +27,55 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      #app-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: #020617;
+      }
+      #app-preloader img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        animation: app-preloader-pulse 1.4s ease-in-out infinite;
+      }
+      #app-preloader .app-preloader-spinner {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 3px solid rgba(148, 163, 184, 0.25);
+        border-top-color: #c0392b;
+        animation: app-preloader-spin 0.8s linear infinite;
+      }
+      @keyframes app-preloader-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes app-preloader-pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+    </style>
   </head>
   <body class="bg-surface-950 font-sans antialiased">
-    <app-root></app-root>
+    <app-root>
+      <div id="app-preloader">
+        <img src="assets/logo.png" alt="PitStop Manager" />
+        <div class="app-preloader-spinner"></div>
+      </div>
+    </app-root>
   </body>
 </html>
